@@ -4,7 +4,6 @@ import os
 import time
 import easyocr
 
-# Укажите путь к Tesseract
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 image_folder = 'C:/Users/79064/Desktop/etu/4/opnp/test img/'
 
@@ -60,7 +59,7 @@ def analyze_with_pytesseract(image_folder, image_numbers):
 
     
 
-image_numbers = [14]
+image_numbers = [1]
 
 analyze_with_easyocr(image_folder, image_numbers)
 analyze_with_pytesseract(image_folder, image_numbers)
