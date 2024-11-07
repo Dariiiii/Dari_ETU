@@ -4,7 +4,7 @@
 
 ### опнп
 
-[таблица моделей](https://docs.google.com/spreadsheets/d/1H2m15oYXDVIcNTyuBMMXizzLEFUzeQ1FmOI0m46mntQ/edit?gid=521865991)
+[таблица моделей](https://docs.google.com/spreadsheets/d/1-XdkNXitrbQMn1pOYsEeUOjcrhrV8kbAGms1g2EOszE/edit?gid=719118129#gid=719118129)
 
 [ключевые вопросы](https://docs.google.com/document/d/1Vciw9_i_sdgQIkSIZg8oMQMvN5XArE9sM9inBWIFa88/edit?tab=t.0#heading=h.23om8evpbx38)
 
