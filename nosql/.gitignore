@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+clockcv-backend/venv/
+__pycache__/
+local/
+pgdata
+deployments/dev.env
+storage/
+/clockcv-backend/deployments/dev.env
