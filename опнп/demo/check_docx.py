@@ -57,6 +57,8 @@ def process_image_data(image_data, image_number, width_cm, height_cm):
     res_ocr = analyze_with_pytesseract(image)
     text_p = sum(1 for char in res_ocr['text'] if not char.isspace())
     results = process_image(image)
+    image_size = len(image_data)
+    print('Image size:', image_size)
     # print(f"\nИтоговые результаты для изображения {image_number}:")
     # print(f'  Высота изображения: {height_cm:.4f}, ширина: {width_cm:.4f}')
     # print(f'  Текст (pytesseract): {res_ocr['text']}, Время: {res_ocr['ocr_time']:.4f} секунд')
@@ -65,7 +67,7 @@ def process_image_data(image_data, image_number, width_cm, height_cm):
     # print(f"  Энтропия: {results['entropy_score']:.4f}, Время: {results['entropy_time']:.4f} секунд")
     # print(f'{height_cm:.2f} {width_cm:.2f}')
     # print(f"{results['laplacian_score']:.2f} {results['brisque_score']:.2f} {results['entropy_score']:.2f}")
-    print(f"{results['laplacian_score']:.2f} {results['brisque_score']:.2f} {results['entropy_score']:.2f} {height_cm:.2f} {width_cm:.2f} {text_p}")
+    # print(f"{results['laplacian_score']:.2f} {results['brisque_score']:.2f} {results['entropy_score']:.2f} {height_cm:.2f} {width_cm:.2f} {text_p}")
 
 def analyze_with_pytesseract(image):
     start_time = time.time()
