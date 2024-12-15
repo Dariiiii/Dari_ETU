@@ -45,8 +45,8 @@ def analyze_with_easyocr(image_folder, image_numbers):
     elapsed_time = end_time - start_time
     print(f'Время выполнения (EasyOCR): {elapsed_time:.2f} секунд')
     
-    for i, text in enumerate(extracted_texts, start=image_numbers[0]):
-        print(f'Изображение {i}:\n{text}\n')
+    # for i, text in enumerate(extracted_texts, start=image_numbers[0]):
+    #     print(f'Изображение {i}:\n{text}\n')
 
 def analyze_with_pytesseract(image_folder, image_numbers):
     extracted_texts = []
@@ -73,10 +73,10 @@ def analyze_with_pytesseract(image_folder, image_numbers):
     
     print(f'Время выполнения (pytesseract): {elapsed_time:.2f} секунд')
     
-    for i, text in enumerate(extracted_texts, start=image_numbers[0]):
-        print(f'Изображение {i}:\n{text}\n')
+    # for i, text in enumerate(extracted_texts, start=image_numbers[0]):
+        # print(f'Изображение {i}:\n{text}\n')
 
 # Указываем номера изображений для анализа
-image_numbers = [1]  # Например, для изображений с номерами 1, 2 и 3
+image_numbers = [1,2,3,4,5,6,7,8,9,10,12]  # Например, для изображений с номерами 1, 2 и 3
 analyze_with_easyocr(image_folder, image_numbers)
 analyze_with_pytesseract(image_folder, image_numbers)

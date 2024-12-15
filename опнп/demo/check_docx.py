@@ -1,13 +1,8 @@
 from docx import Document
-from docx.oxml.ns import qn
 import time
 import cv2
 import pytesseract
-import os
-import easyocr
 import numpy as np
-from skimage import io
-from brisque import BRISQUE
 from PIL import Image
 from io import BytesIO
 
@@ -63,11 +58,10 @@ def process_image_data(image_data, image_number, width_cm, height_cm):
     # print(f'  Высота изображения: {height_cm:.4f}, ширина: {width_cm:.4f}')
     # print(f'  Текст (pytesseract): {res_ocr['text']}, Время: {res_ocr['ocr_time']:.4f} секунд')
     # print(f"  Дисперсия Laplacian: {results['laplacian_score']:.4f}, Время: {results['laplacian_time']:.4f} секунд")
-    # print(f"  Оценка BRISQUE: {results['brisque_score']:.4f}, Время: {results['brisque_time']:.4f} секунд")
     # print(f"  Энтропия: {results['entropy_score']:.4f}, Время: {results['entropy_time']:.4f} секунд")
     # print(f'{height_cm:.2f} {width_cm:.2f}')
-    # print(f"{results['laplacian_score']:.2f} {results['brisque_score']:.2f} {results['entropy_score']:.2f}")
-    # print(f"{results['laplacian_score']:.2f} {results['brisque_score']:.2f} {results['entropy_score']:.2f} {height_cm:.2f} {width_cm:.2f} {text_p}")
+    # print(f"{results['laplacian_score']:.2f}  {results['entropy_score']:.2f}")
+    # print(f"{results['laplacian_score']:.2f}  {results['entropy_score']:.2f} {height_cm:.2f} {width_cm:.2f} {text_p}")
 
 def analyze_with_pytesseract(image):
     start_time = time.time()
@@ -86,17 +80,6 @@ def analyze_with_pytesseract(image):
         'text': text,
         'ocr_time': elapsed_time
     }
-
-
-def evaluate_brisque(image):
-    start_time = time.time()
-    image_array = np.array(image)
-    brisque_model = BRISQUE()
-    score = brisque_model.score(image_array)
-    end_time = time.time()
-    processing_time = end_time - start_time
-    return score, processing_time
-
 
 def evaluate_laplacian(image):
     start_time = time.time()
@@ -128,13 +111,10 @@ def process_image(image):
     if image_array.ndim == 2:
         image_array = cv2.cvtColor(image_array, cv2.COLOR_GRAY2BGR)
     image = Image.fromarray(image_array)
-    brisque_score, brisque_time = evaluate_brisque(image)
     laplacian_score, laplacian_time = evaluate_laplacian(image)
     entropy_score, entropy_time = evaluate_entropy(image)
 
     return {
-        'brisque_score': brisque_score,
-        'brisque_time': brisque_time,
         'laplacian_score': laplacian_score,
         'laplacian_time': laplacian_time,
         'entropy_score': entropy_score,
