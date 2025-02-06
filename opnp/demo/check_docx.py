@@ -7,7 +7,7 @@ from PIL import Image
 from io import BytesIO
 
 # Константа для конвертации EMU в сантиметры
-EMU_TO_CM = 360000
+EMU_TO_CM = EMU_TO_CM = 360000
 
 # Настройка Tesseract
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -53,9 +53,9 @@ def process_image_data(image_data, image_number, width_cm, height_cm):
     text_p = sum(1 for char in res_ocr['text'] if not char.isspace())
     results = process_image(image)
     image_size = len(image_data)
-    print('Image size:', image_size)
+    # print('Image size:', image_size)
     # print(f"\nИтоговые результаты для изображения {image_number}:")
-    # print(f'  Высота изображения: {height_cm:.4f}, ширина: {width_cm:.4f}')
+    print(f'  Высота изображения: {height_cm:.4f}, ширина: {width_cm:.4f}')
     # print(f'  Текст (pytesseract): {res_ocr['text']}, Время: {res_ocr['ocr_time']:.4f} секунд')
     # print(f"  Дисперсия Laplacian: {results['laplacian_score']:.4f}, Время: {results['laplacian_time']:.4f} секунд")
     # print(f"  Энтропия: {results['entropy_score']:.4f}, Время: {results['entropy_time']:.4f} секунд")
