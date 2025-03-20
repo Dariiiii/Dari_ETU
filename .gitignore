@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+
+.idea
+venv
+*.pyc
+
+files/*
+!files/sample.odp
+
+package-lock.json
+node_modules
+
+src/
+.env
+
+/VERSION.json
