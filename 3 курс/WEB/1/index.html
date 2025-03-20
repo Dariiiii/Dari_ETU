@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Тетрис</title>
+  <style>
+    body {
+      background-image: url('33.jpg');
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      height: 100vh;
+      margin: 0;
+      font-family: "Comic Sans MS";
+    }
+
+    canvas {
+      border: 1px solid wheat;
+      background-color: white;
+    }
+
+    .info {
+      flex-direction: column;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: rgb(252, 205, 151);
+      text-shadow: 2px 2px 4px rgb(90, 90, 90);
+    }
+    .result{
+      flex-direction: column;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: rgb(252, 205, 151);
+      text-shadow: 2px 2px 4px rgb(90, 90, 90);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="info">
+    <p style="margin: 0px 0px 0px 20%">Игрок:
+      <script>
+        document.write(localStorage["username"]); 
+      </script>
+    </p>
+    <p style="margin: 0px 0px 0px 20%">Следующая фигура:</p>
+    <canvas id="nextFigure" width="160" height="160" style="margin: 0px 0px 0px 20%">></canvas>
+    <p style="margin: 0px 0px 0px 20%">Клавиши для управления:</p>
+    <ul>
+      <li style="margin: 0px 0px 0px 15%">Стрелка влево - перемещение фигуры влево</li>
+      <li style="margin: 0px 0px 0px 15%">Стрелка вправо - перемещение фигуры вправо</li>
+      <li style="margin: 0px 0px 0px 15%">Пробел / стрелка вниз - 'уронить' фигуру</li>
+      <li style="margin: 0px 0px 0px 15%">Стрелка вверх - повернуть фигуру</li>
+    </ul>
+  </div>
+  <canvas id="tetris" width="350" height="700"></canvas>
+  <div class="result">
+    <p style="margin: 0px 0px 0% 200%">Счет: <span id="score">0</span></p>
+    <p style="margin: 0px 0px 220% 200%">Уровень: <span id="level">1</span></p>
+  </div>
+  <script type="module" src="my_tet.js"></script>
+</body>
+
+</html>

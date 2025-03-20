@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Конец игры</title>
+	<style>
+		body {
+			background-size: cover;
+			font-family: "Comic Sans MS";
+		}
+
+		canvas {
+			border: 3px solid rgb(89, 185, 70);
+			background-color: rgb(120, 231, 79);
+			border-radius: 5px;
+		}
+
+		#info {
+			font-family: "Comic Sans MS";
+			font-size: 30px;
+			margin-top: 20px;
+			color: rgb(120, 231, 79);
+			text-shadow: 2px 2px 4px grey;
+		}
+
+		.button {
+			margin-top: 20px;
+			padding: 10px 20px;
+			display: inline-block;
+			border: none;
+			background-color: rgb(120, 231, 79);
+			color: white;
+			text-shadow: 2px 2px 4px grey;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		.button:hover {
+			background-color: rgb(120, 231, 79);
+			;
+		}
+
+		.button:active {
+			transform: translateY(4px);
+			opacity: 0.8;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 id="info">Игра окончена!</h1>
+		<canvas id="table" width="400" height="300" class="canvas" display="flex"></canvas>
+		<input class="button" type="submit" value="Попробовать снова" onclick="tryAgain()" />
+	</div>
+	<script>
+		function tryAgain() { window.location.href = 'index.html'; }
+	</script>
+	<script type="module" src="/scripts/end.js"></script>
+</body>
+
+</html>

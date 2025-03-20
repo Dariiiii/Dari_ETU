@@ -1,0 +1,5 @@
+WinHlp32.exE
+c:\WINDOWS
+c:\Windows\system32
+
+winhlp32.exe winosa.hlp

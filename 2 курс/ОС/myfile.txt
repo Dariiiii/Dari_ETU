@@ -1,0 +1,915 @@
+Лабораторная работа №1
+по дисциплине "Операционные системы и среды"
+Тема: "ИНТЕРПРЕТАТОРЫ КОМАНДНОЙ СТРОКИ ОС LINUX"
+Усачева Дарья Владимировна, студентка группы 1384
+
+
+I. Создан файл myfile.txt с помощью команды ">myfile.txt"
+
+II. 1) 
+$ date 
+Mon Feb 13 22:39:59 MSK 2023 	// команда выводит текущую дату
+$ whoiam
+dari        			// команда выводит кто находится в системе
+$ tty
+/dev/pts/0			// команда выводит полное имя файла
+$ logname
+dari				// команда выводит входное имя 
+$ uname 
+Linux				// команда выводит имя UNIX-системы ("имя компьютера")
+$ uname -a 
+Linux DESKTOP-7CDTIKD 5.10.16.3-microsoft-standard-WSL2 #1 SMP Fri Apr 2 22:23:49 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+				// команда выводит информацию о ядре, имени компьютера, пользователя, и архитектуре процессора
+$ uname -i 
+x86_64				// команда выводит имя аппаратной реализации(платформы)
+
+$ uname -r 
+5.10.16.3-microsoft-standard-WSL2
+				// команда выводит информацию о релизе системы(версия ядра)
+$ uname -s 
+Linux				// команда выводит имя ОС(используется по умолчанию)
+2) $ sleep 5
+$ sleep 10000 должно появиться приглашение через 10000 секунд, если 
+вызвать сигнал преывания(SIGNINT -- INTERRUPT),введя символ <^C> появиться очередное приглашение ' $'
+
+3) man [команды системы] 	// выводит справочник о заданной команде системы.
+Справочник почти всегда содержит разделы: 
+NAME
+SYNOPSIS
+DESCRIPTION
+EXAMPLES
+DATE STRING
+AUTHOR
+REPORTING BUGS
+COPYRIGHT
+SEE ALSO
+a) $ ls
+junk  myfile.txt  temp 		// результат команды ls команда  перечисляет имена существующих в каталоге файлов
+$ ls -a				// данная команда включает показ скрытых файлов.
+$ ls --h			// выводит справку по использованию утилиты
+$ ls -l
+total 4
+-rw-r--r-- 1 dari dari  0 Feb 13 22:36 junk
+-rw-r--r-- 1 dari dari 14 Feb 13 22:12 myfile.txt
+-rw-r--r-- 1 dari dari  0 Feb 13 22:36 temp
+				//-l -- длинный формат, отображающий типы файлов Unix, разрешения, количество жестких ссылок,
+				владельца, группу, размер, дату и время последнего изменения и имя.
+
+$ ls junk 			// выводит имя файла
+$ ls junk temp 			// сначала выcводит имя файла junk, затем выводит имя файла temp
+
+b) $ cat junk temp		//cat [имя файла] -- выводит содержимое файла
+				Когда cat получается несколько имен файлов, 
+				то он поочередно выводит содержимое файлов.
+ 
+c) $ mv junk aaa 		//Переименование файла осуществляется пересылкой его
+				 от одного имени к другому (mv -- move)
+$ ls
+aaa myfile.txt temp
+
+$ cp aaa bbb			//Копирование файлов осуществляется с помощью команды cp
+$ ls
+aaa bbb myfile.txt temp
+
+Удаляет файлы команда rm:
+$ rm temp junk			//Команда rm удаляет файлы
+rm: junk non-existent
+$ rm aaa bbb
+$ ls
+$ myfile.txt
+
+5)$ pwd
+/home/dari/4_sem		// Результат команды pwd -- полное имя текущего каталога
+/home/dari/4_sem/prog.c 	// Полное имя файла prog.c
+
+Если ввести полное имя текущей директории и просто ls, то отличий не будет
+Если ввести 'ls /', то выведутся все файлы/папки, которые находятся в текущей директории
+Если ввести 'ls -l /', то выведутся все файлы/папки, которые находятся в текущей директории и их типы,
+разрешения, количество жестких ссылок, владельца, группу, размер, дату и время последнего изменения и имя.
+
+В каталоге /bin хранятся все установленные пакеты
+
+Перейти в вышележащий каталог можно с помощью 'cd ..'
+Если изначально был каталог /home/dari/4_sem, то после ввода 'cd ..' мы окажемся в директории /home/dari
+При вводе еще раз 'cd..' мы будем в директории /home
+/ - конечная директория(корневая), куда мы попадем после нескольких вводов 'cd..'.
+
+$ ls -ld
+drwxr-xr-x 19 root root 4096 Feb 13 22:09 .  
+				// Вывод команды 'ls -ld. Владельцем данных каталогов 
+				является root, поэтому пользователь не может их изменять.
+Если написать cd без аргументов, то пользователь вернется в свой домашний каталог
+
+$ mkdir lb1			// Создает в текущем каталоге новую папку с именем lb1
+Чтобы перейти в него из директории, в которой он был создан, не нужно писать полный маршрутный путь.
+Его необходимо писать только в случае, если нужная директория отсуствует в текущем каталоге.
+
+cp ../prog.c . 			// копирование в новый каталог файл prog.c из вышележащего (исходного) каталога
+Чтобы вернуться в вышележащий каталог можно воспользоваться командой 'cd ..' или 'cd /home/dari/4_sem'
+
+$ rmdir: failed to remove 'lb1/': Directory not empty  
+				// Результат работы команды 'rmdir .'Нельзя удалять директорию, 
+				если она непустая и если в ней находится сейчас пользователь.
+$ ls
+myfile.txt  prog.c 		//Директория успешно удалена
+6)$ ps
+  PID TTY          TIME CMD
+  117 pts/0    00:00:00 bash
+  360 pts/0    00:00:00 ps	//Вывод команды ps -- информация о процессах,
+				 запущенных с терминала.
+$ ps -A
+  PID TTY          TIME CMD
+    1 ?        00:00:01 init
+  115 ?        00:00:00 init
+  116 ?        00:00:00 init
+  117 pts/0    00:00:00 bash
+  362 pts/0    00:00:00 ps	//ps -A -- информация о всех запущенных процессах
+
+III.
+$ vim prog.c 			//Был создан файл prog.c с кодом внутри:
+#include <stdio.h>
+int main() {
+    printf("Hello, everybody ! ");
+} 
+
+$ cc prog.c 			// Команда вызова компилятора для программ на C
+$ cc prog.c -c 			// Ключ -c генерирует объектный файл, а ключ -o позволяет задать имя исполняемого файла.
+$ ls
+a.out  myfile.txt  prog.c  prog.o
+				// Если создать файл prog.c и создать его объектный файл, то он получит название prog.o
+$ cc prog.c -o hello		//выполняемый файл, полученный после редактирования связей, будет иметь имя hello, а не 'a.out'.
+$ ./hello>res
+После сборки исполняемого файла его вывод был переназначен в res
+Hello, everybody ! 		// Результат исполняемого файла. 
+
+Был создан файл my_open.c с кодом внутри:
+#include <stdio.h>
+
+
+int main (int argc, char* argv[]) {
+    if (argc > 1) {
+        if (fopen(argv[1],"r") == NULL) {
+            printf("%s: неудача при попытке открыть файл %s",argv[0],argv[1]);
+        }
+        else {
+            printf("%s: файл %s открыт",argv[0],argv[1]);
+        }
+    } else {
+        printf("открываемый файл не указан");
+    }
+
+    return 0;
+}
+
+Примеры работы:
+1) $ ./a.out
+открываемый файл не указан 	// Результат работы программы, если не указать имя файла
+2) $ ./a.out  test_file
+./a.out: файл test_file открыт 	// Результат работы программы, если данный файл
+удалось открыть(для этого примера предварительно был создан файл)
+3) $ ./a.out  bag
+./a.out: неудача при попытке открыть файл bag 
+				// Результат работы программы,если подать ей несуществующий файл
+
+Исходя из примеров, видно, что программа пытается открыть поданный файл.
+
+Исправив немного изначальные программы и создав file_name.c:
+
+#include <stdio.h>
+int main (int argc, char* argv[]) {
+            printf("%s",argv[1]);
+        }
+    return 0;
+}
+
+(исправленная первая программа таким образом, чтобы на печать выводилось имя файла),
+можно организовать конвейер из двух созданных исполняемых программ командами: || и |
+
+Примеры их работы:
+1)$ ./file_name || ./my_open
+test_file			// Результат позволяет сделать вывод, что при использовании команды
+				|| вывод my_open был перенаправлен в file_name.
+
+2)$ ./file_name | ./my_open
+./my_open: файл test_file открыт 	
+				// Результат позволяет сделать вывод, что при использовании 
+				команды | вывод file_name был перенаправлен в my_open.
+
+Рассмотрим другие варианты конвейеров с помощью операторов &, &&, ;
+
+1)$ ./file_name res && ./my_open test_file
+res
+./my_open: файл test_file открыт// Оператор && соответствует логическому -И- и используется для запуска нескольких команд.
+				Команды выполняются последовательно, и если одна из них не выполняется, тогда и вторая тоже.
+
+2)$ ./file_name res & ./my_open test_file
+[1] 208
+./my_open: файл test_file открыт
+res
+[1]+  Done                    ./file_name res
+				// Оператор & соответствует логическому -И- и используется для запуска нескольких команд.
+				Отличие от && в том, что если одна из команд не выполнится, то вторая может выполнится
+				(если в ней нет ошибок).
+
+
+3)$ ./file_name res ; ./my_open test_file
+res
+./my_open: файл test_file открыт// Оператор ; просто последовательно выполняет несколько команд вне зависимости от 
+				результата выполнения некоторых из них
+
+
+IV.
+1. 1)$ ls -l | grep -E '^d[r,w,x,\-]{9}'
+drwxr-xr-x 2 dari dari 12288 Nov 27 22:29 VSFeedbackVSRTCLogs
+drwxr-xr-x 2 dari dari  4096 Dec  8 12:23 VSLiveshareLogs
+drwxrwxrwx 3 dari dari  4096 Nov 27 22:29 loose
+drwx------ 2 dari dari  4096 Oct  5 01:57 pulse-PKdhtXMmr18n
+drwxr-xr-x 3 dari dari  4096 Sep 15 10:02 remote-file-71752ccfe2464e99
+drwx------ 2 root root  4096 Oct 16  2021 tmpa891xygi
+drwxr-xr-x 2 dari dari  4096 Nov 28 05:57 vscode-typescript1000
+				// Вывод всех каталогов, находящихся в /tmp. 
+
+2)$ ls -l | grep -E '^(d|\-)[r,w,x,\-]{6}r'
+drwxr-xr-x 2 dari dari 12288 Nov 27 22:29 VSFeedbackVSRTCLogs
+drwxr-xr-x 2 dari dari  4096 Dec  8 12:23 VSLiveshareLogs
+drwxrwxrwx 3 dari dari  4096 Nov 27 22:29 loose
+drwxr-xr-x 3 dari dari  4096 Sep 15 10:02 remote-file-71752ccfe2464e99
+-rw-r--r-- 1 dari dari    69 Dec 22 02:33 remote-wsl-loc.txt
+drwxr-xr-x 2 dari dari  4096 Nov 28 05:57 vscode-typescript1000
+				// Вывод файлов в каталоге /tmp, которые доступны всем.
+3)$ ls -l | grep -E '\sroot\s'
+drwx------ 2 root root  4096 Oct 16  2021 tmpa891xygi
+				//Вывод всех файлов в /tmp, принадлежащих root
+4)$ ls -l | grep -Ev '\sroot\s'
+total 308
+srwxr-xr-x 1 dari dari     0 Jul 16  2022 CoreFxPipe_011722088edc459f9f112552fc89a2fe
+srwxr-xr-x 1 dari dari     0 Dec 23  2021 CoreFxPipe_02c9db5f08534af5b86e1f90d850af58
+srwxr-xr-x 1 dari dari     0 Nov 20  2021 CoreFxPipe_057134f84dfd4863b2c2ca455e3c4245
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 CoreFxPipe_0c9bba3cdc5a4cc8b2439e72a899aba6
+srwxr-xr-x 1 dari dari     0 Dec 12  2021 CoreFxPipe_155aa91b16ee4ef492656b87d2188a99
+srwxr-xr-x 1 dari dari     0 Jun 11  2022 CoreFxPipe_1688a13a3421423ba486d2da871e24c7
+srwxr-xr-x 1 dari dari     0 Nov 24  2021 CoreFxPipe_182b90fa22454cd5989ece09e02b0d7d
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 CoreFxPipe_1d71eccc5b69441585f6c669b5e241ae
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 CoreFxPipe_1e9057bd6a9642308f3379d3bf3fdf0d
+srwxr-xr-x 1 dari dari     0 Jan 10  2022 CoreFxPipe_2b09df5b239446ca8282709863f6e151
+srwxr-xr-x 1 dari dari     0 Nov 15  2021 CoreFxPipe_2bf0ddf02c6c4612923936e6598cb0b4
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 CoreFxPipe_391bb20b1f8c498e907a9df6ae390414
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 CoreFxPipe_3d4453f047594e02af3a446403351bc6
+srwxr-xr-x 1 dari dari     0 Dec 13  2021 CoreFxPipe_4339ad758eb24936bafa7e30750d6698
+srwxr-xr-x 1 dari dari     0 Jun  2  2022 CoreFxPipe_485c50f3506c4439bad57aef03853998
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 CoreFxPipe_4a010140481748bfb9ec02029678cec6
+srwxr-xr-x 1 dari dari     0 Jun  2  2022 CoreFxPipe_4b8116c11d604547a04f36d8052ec8ae
+srwxr-xr-x 1 dari dari     0 Dec 27  2021 CoreFxPipe_5121c5c1bcf14f3c93fd3e274a29e860
+srwxr-xr-x 1 dari dari     0 Jan 10  2022 CoreFxPipe_51b854e6193f41f28d1e5fa11072047a
+srwxr-xr-x 1 dari dari     0 Nov 28  2021 CoreFxPipe_52e76298486e44968f1ecee26522557c
+srwxr-xr-x 1 dari dari     0 Jun 11  2022 CoreFxPipe_54faf01c54de4116818b1d835d99c9a3
+srwxr-xr-x 1 dari dari     0 Dec 22  2021 CoreFxPipe_55894d0a3204477888ec7d3b9ce2fd03
+srwxr-xr-x 1 dari dari     0 Jun 11  2022 CoreFxPipe_597bd3b7d30e4073ab4093d12a648c23
+srwxr-xr-x 1 dari dari     0 Feb 27  2022 CoreFxPipe_5f3a1c201afa482aaf9e310ede6333bf
+srwxr-xr-x 1 dari dari     0 Nov 22  2021 CoreFxPipe_60a9d7a288204fe1b052ac6b5afa61b3
+srwxr-xr-x 1 dari dari     0 Dec 20  2021 CoreFxPipe_61d7c828576e476b8cea15dfc65c1bbe
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 CoreFxPipe_623d441dbca94a7eb9435a6205486033
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 CoreFxPipe_6eac8fcd122f4b608de3b8702cb7490e
+srwxr-xr-x 1 dari dari     0 Dec 12  2021 CoreFxPipe_751c2bb29b1d4dabb64978601d5bde2b
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 CoreFxPipe_761df4e7d58348879c5df85b50f527eb
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 CoreFxPipe_7dcc4d23201346fb9da7ba34c84dafcf
+srwxr-xr-x 1 dari dari     0 Nov 20  2021 CoreFxPipe_800215c7e01840d5b3036866da8f11ec
+srwxr-xr-x 1 dari dari     0 Apr 21  2022 CoreFxPipe_8840bdbcfed8478ba385a0834f83c437
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 CoreFxPipe_8d03b62f52334d00b6834ae3a3323741
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 CoreFxPipe_914bd300da1846a487144014a1a8e06b
+srwxr-xr-x 1 dari dari     0 Nov 28  2021 CoreFxPipe_9761db887db14434a6a84c08d01cec95
+srwxr-xr-x 1 dari dari     0 Dec 21  2021 CoreFxPipe_98932181c8274558ba401b86d18d2c92
+srwxr-xr-x 1 dari dari     0 Jun  5  2022 CoreFxPipe_99fe973418e64a6dab0fca40e994f2e1
+srwxr-xr-x 1 dari dari     0 Mar 10  2022 CoreFxPipe_a0b1d3d7fa014d58b73d031ef067533b
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 CoreFxPipe_a5c024fd156f4adfb2e10c970217bb6c
+srwxr-xr-x 1 dari dari     0 Jul 16  2022 CoreFxPipe_af8771cc8b084e3f9ead09b9d2a441b4
+srwxr-xr-x 1 dari dari     0 Jun  8  2022 CoreFxPipe_b001aed98b744bacb8c0bc0d9479f625
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 CoreFxPipe_b0392e8d51e243af94ae08ce1b172bd6
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 CoreFxPipe_b2f1091ddac2425796466b76d72eb7c0
+srwxr-xr-x 1 dari dari     0 May  6  2022 CoreFxPipe_b38c4e3495f843aabfac644ce339f747
+srwxr-xr-x 1 dari dari     0 Nov 29  2021 CoreFxPipe_c1d2483ab3e647f6b3a457864bcfc92e
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 CoreFxPipe_c37bd9f7537342f288d4e8318ea4fc3e
+srwxr-xr-x 1 dari dari     0 Dec 11  2021 CoreFxPipe_c55ed8c0ac7c4dfdb21ff22e0aba1d4d
+srwxr-xr-x 1 dari dari     0 Dec  4  2021 CoreFxPipe_c75e6cabf3534f03a243921fadd130c6
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 CoreFxPipe_c815425fe72f45bb8f09eef8b1a88ed6
+srwxr-xr-x 1 dari dari     0 Apr 21  2022 CoreFxPipe_cbecf95308b5415cb5f1ede8e4631fe6
+srwxr-xr-x 1 dari dari     0 Jun  5  2022 CoreFxPipe_cc2c4719d0574b2d8e64d9836fdfe2b8
+srwxr-xr-x 1 dari dari     0 Nov 26  2021 CoreFxPipe_cc9d7a0340994329a700bbbc6101a5db
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 CoreFxPipe_cdf1969b816843d89e9768720a5a3fc5
+srwxr-xr-x 1 dari dari     0 Feb 28  2022 CoreFxPipe_ce91f78add8e480aba9278dec49cf0e5
+srwxr-xr-x 1 dari dari     0 Jan  4  2022 CoreFxPipe_d375324ce8e44f2eb60326208ca29b06
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 CoreFxPipe_d8fa5d558f274110bafa662f9b8e78d0
+srwxr-xr-x 1 dari dari     0 Nov 22  2021 CoreFxPipe_da6ed98930c843108cf4612af359fb9b
+srwxr-xr-x 1 dari dari     0 Jan 25  2022 CoreFxPipe_ded0790e41964d9d88db6b4b4084c08a
+srwxr-xr-x 1 dari dari     0 Sep 15 10:02 CoreFxPipe_e87ea7e20f1c4700b985d811bf038f81
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 CoreFxPipe_ec10b4948456460fa68055873668436a
+srwxr-xr-x 1 dari dari     0 May 29  2022 CoreFxPipe_ef87c90eca3744d3b9ce5e44b42a2612
+srwxr-xr-x 1 dari dari     0 Apr 14  2022 CoreFxPipe_ef93c1e35a694f328ac91061cb6dee79
+srwxr-xr-x 1 dari dari     0 Nov 26  2021 CoreFxPipe_f093f8a3f3cc4e8380d397b778f35d53
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 CoreFxPipe_f4f1f2db0a16407f873637198314f5e9
+srwxr-xr-x 1 dari dari     0 Jun 13  2022 CoreFxPipe_f7d08245bd5e462181db3db777308fbb
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 CoreFxPipe_f84fe0fbfae443ef9727b5d3d676714c
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 CoreFxPipe_fe13e538bbb540d1a58f535d3a2d2660
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 CoreFxPipe_vscode.03ee98085378143ec4439ce564181aae
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 CoreFxPipe_vscode.05e62a7a4f70cd724e49acdd5f379ab3
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 CoreFxPipe_vscode.10bb3094d2b46a4cd74b08539b00e702
+srwxr-xr-x 1 dari dari     0 Jun  8  2022 CoreFxPipe_vscode.2dad47d33069bcce331d69982eaf5b6a
+srwxr-xr-x 1 dari dari     0 Apr 14  2022 CoreFxPipe_vscode.468e896b5ffac0aa5677f7043641728a
+srwxr-xr-x 1 dari dari     0 Feb 27  2022 CoreFxPipe_vscode.4e0f526b0ad200214c4dc4357dfc4166
+srwxr-xr-x 1 dari dari     0 Jan 10  2022 CoreFxPipe_vscode.ce670451e7a616eedfba6483b14545b3
+srwxr-xr-x 1 dari dari     0 May 29  2022 CoreFxPipe_vscode.dd79ca3fde8cc1d93613b39146775b16
+srwxr-xr-x 1 dari dari     0 Sep 15 10:02 CoreFxPipe_vscode.eccd123411659305d69e27620475e4f7
+drwxr-xr-x 2 dari dari 12288 Nov 27 22:29 VSFeedbackVSRTCLogs
+drwxr-xr-x 2 dari dari  4096 Dec  8 12:23 VSLiveshareLogs
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-1035-337766-in
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-1035-337766-out
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-10573-1293990-in
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-10573-1293990-out
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-10980-1387164-in
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-10980-1387164-out
+prwx------ 1 dari dari     0 Jun 11  2022 clr-debug-pipe-1169-311480-in
+prwx------ 1 dari dari     0 Jun 11  2022 clr-debug-pipe-1169-311480-out
+prwx------ 1 dari dari     0 Jun 11  2022 clr-debug-pipe-121-1132-in
+prwx------ 1 dari dari     0 Jun 11  2022 clr-debug-pipe-121-1132-out
+prwx------ 1 dari dari     0 Jun  9  2022 clr-debug-pipe-135-2339-in
+prwx------ 1 dari dari     0 Jun  9  2022 clr-debug-pipe-135-2339-out
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-137-1068-in
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-137-1068-out
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-142-1639293-in
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-142-1639293-out
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-142-897-in
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-142-897-out
+prwx------ 1 dari dari     0 Dec 18  2021 clr-debug-pipe-144-756-in
+prwx------ 1 dari dari     0 Dec 18  2021 clr-debug-pipe-144-756-out
+prwx------ 1 dari dari     0 Jun  2  2022 clr-debug-pipe-147-3118-in
+prwx------ 1 dari dari     0 Jun  2  2022 clr-debug-pipe-147-3118-out
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-152-1370778-in
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-152-1370778-out
+prwx------ 1 dari dari     0 Nov 28  2021 clr-debug-pipe-154-944-in
+prwx------ 1 dari dari     0 Nov 28  2021 clr-debug-pipe-154-944-out
+prwx------ 1 dari dari     0 Dec 18  2021 clr-debug-pipe-158-1183-in
+prwx------ 1 dari dari     0 Dec 18  2021 clr-debug-pipe-158-1183-out
+prwx------ 1 dari dari     0 Jun  9  2022 clr-debug-pipe-16327-1442509-in
+prwx------ 1 dari dari     0 Jun  9  2022 clr-debug-pipe-16327-1442509-out
+prwx------ 1 dari dari     0 Jun 11  2022 clr-debug-pipe-164-1141-in
+prwx------ 1 dari dari     0 Jun 11  2022 clr-debug-pipe-164-1141-out
+prwx------ 1 dari dari     0 Jun  5  2022 clr-debug-pipe-165-3081-in
+prwx------ 1 dari dari     0 Jun  5  2022 clr-debug-pipe-165-3081-out
+prwx------ 1 dari dari     0 Nov 28  2021 clr-debug-pipe-166-34390-in
+prwx------ 1 dari dari     0 Nov 28  2021 clr-debug-pipe-166-34390-out
+prwx------ 1 dari dari     0 Dec 23  2021 clr-debug-pipe-166-843-in
+prwx------ 1 dari dari     0 Dec 23  2021 clr-debug-pipe-166-843-out
+prwx------ 1 dari dari     0 Jun  9  2022 clr-debug-pipe-170-1706-in
+prwx------ 1 dari dari     0 Jun  9  2022 clr-debug-pipe-170-1706-out
+prwx------ 1 dari dari     0 Dec 22  2021 clr-debug-pipe-175-1048-in
+prwx------ 1 dari dari     0 Dec 22  2021 clr-debug-pipe-175-1048-out
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-175-856-in
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-175-856-out
+prwx------ 1 dari dari     0 Dec 18  2021 clr-debug-pipe-179-11679-in
+prwx------ 1 dari dari     0 Dec 18  2021 clr-debug-pipe-179-11679-out
+prwx------ 1 dari dari     0 Jan 10  2022 clr-debug-pipe-182-27756-in
+prwx------ 1 dari dari     0 Jan 10  2022 clr-debug-pipe-182-27756-out
+prwx------ 1 dari dari     0 Nov 20  2021 clr-debug-pipe-183-568533-in
+prwx------ 1 dari dari     0 Nov 20  2021 clr-debug-pipe-183-568533-out
+prwx------ 1 dari dari     0 Jan 25  2022 clr-debug-pipe-183-8232-in
+prwx------ 1 dari dari     0 Jan 25  2022 clr-debug-pipe-183-8232-out
+prwx------ 1 dari dari     0 Nov 26  2021 clr-debug-pipe-186-11500-in
+prwx------ 1 dari dari     0 Nov 26  2021 clr-debug-pipe-186-11500-out
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-187-893-in
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-187-893-out
+prwx------ 1 dari dari     0 Dec  4  2021 clr-debug-pipe-190-1009-in
+prwx------ 1 dari dari     0 Dec  4  2021 clr-debug-pipe-190-1009-out
+prwx------ 1 dari dari     0 Sep 15 10:02 clr-debug-pipe-195-5461-in
+prwx------ 1 dari dari     0 Sep 15 10:02 clr-debug-pipe-195-5461-out
+prwx------ 1 dari dari     0 Apr 21  2022 clr-debug-pipe-196-1874-in
+prwx------ 1 dari dari     0 Apr 21  2022 clr-debug-pipe-196-1874-out
+prwx------ 1 dari dari     0 Mar 29  2022 clr-debug-pipe-196-7368-in
+prwx------ 1 dari dari     0 Mar 29  2022 clr-debug-pipe-196-7368-out
+prwx------ 1 dari dari     0 Nov 29  2021 clr-debug-pipe-198-1362-in
+prwx------ 1 dari dari     0 Nov 29  2021 clr-debug-pipe-198-1362-out
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-199-10620-in
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-199-10620-out
+prwx------ 1 dari dari     0 Jun  5  2022 clr-debug-pipe-202-6925-in
+prwx------ 1 dari dari     0 Jun  5  2022 clr-debug-pipe-202-6925-out
+prwx------ 1 dari dari     0 Dec 20  2021 clr-debug-pipe-204-4607-in
+prwx------ 1 dari dari     0 Dec 20  2021 clr-debug-pipe-204-4607-out
+prwx------ 1 dari dari     0 Feb 27  2022 clr-debug-pipe-205-4522-in
+prwx------ 1 dari dari     0 Feb 27  2022 clr-debug-pipe-205-4522-out
+prwx------ 1 dari dari     0 Dec 13  2021 clr-debug-pipe-206-1328-in
+prwx------ 1 dari dari     0 Dec 13  2021 clr-debug-pipe-206-1328-out
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-208-141233-in
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-208-141233-out
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-208-9289-in
+prwx------ 1 dari dari     0 Nov 27  2021 clr-debug-pipe-208-9289-out
+prwx------ 1 dari dari     0 Dec 21  2021 clr-debug-pipe-219-3485-in
+prwx------ 1 dari dari     0 Dec 21  2021 clr-debug-pipe-219-3485-out
+prwx------ 1 dari dari     0 Jun 13  2022 clr-debug-pipe-222-3518-in
+prwx------ 1 dari dari     0 Jun 13  2022 clr-debug-pipe-222-3518-out
+prwx------ 1 dari dari     0 Nov 24  2021 clr-debug-pipe-225-5203-in
+prwx------ 1 dari dari     0 Nov 24  2021 clr-debug-pipe-225-5203-out
+prwx------ 1 dari dari     0 Mar 10  2022 clr-debug-pipe-226-3054-in
+prwx------ 1 dari dari     0 Mar 10  2022 clr-debug-pipe-226-3054-out
+prwx------ 1 dari dari     0 Apr 14  2022 clr-debug-pipe-226-4285-in
+prwx------ 1 dari dari     0 Apr 14  2022 clr-debug-pipe-226-4285-out
+prwx------ 1 dari dari     0 Dec 27  2021 clr-debug-pipe-227-5117-in
+prwx------ 1 dari dari     0 Dec 27  2021 clr-debug-pipe-227-5117-out
+prwx------ 1 dari dari     0 Dec 11  2021 clr-debug-pipe-228-5372-in
+prwx------ 1 dari dari     0 Dec 11  2021 clr-debug-pipe-228-5372-out
+prwx------ 1 dari dari     0 Nov 26  2021 clr-debug-pipe-230-2314-in
+prwx------ 1 dari dari     0 Nov 26  2021 clr-debug-pipe-230-2314-out
+prwx------ 1 dari dari     0 May 29  2022 clr-debug-pipe-236-10062-in
+prwx------ 1 dari dari     0 May 29  2022 clr-debug-pipe-236-10062-out
+prwx------ 1 dari dari     0 Jul 16  2022 clr-debug-pipe-240-2070-in
+prwx------ 1 dari dari     0 Jul 16  2022 clr-debug-pipe-240-2070-out
+prwx------ 1 dari dari     0 Dec 12  2021 clr-debug-pipe-240-7450-in
+prwx------ 1 dari dari     0 Dec 12  2021 clr-debug-pipe-240-7450-out
+prwx------ 1 dari dari     0 Mar 29  2022 clr-debug-pipe-255-5346-in
+prwx------ 1 dari dari     0 Mar 29  2022 clr-debug-pipe-255-5346-out
+prwx------ 1 dari dari     0 Nov 20  2021 clr-debug-pipe-257-89573-in
+prwx------ 1 dari dari     0 Nov 20  2021 clr-debug-pipe-257-89573-out
+prwx------ 1 dari dari     0 Jan 10  2022 clr-debug-pipe-264-1144-in
+prwx------ 1 dari dari     0 Jan 10  2022 clr-debug-pipe-264-1144-out
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-268-6448-in
+prwx------ 1 dari dari     0 Apr 10  2022 clr-debug-pipe-268-6448-out
+prwx------ 1 dari dari     0 Jan  4  2022 clr-debug-pipe-272-4631-in
+prwx------ 1 dari dari     0 Jan  4  2022 clr-debug-pipe-272-4631-out
+prwx------ 1 dari dari     0 Apr 21  2022 clr-debug-pipe-275-6286-in
+prwx------ 1 dari dari     0 Apr 21  2022 clr-debug-pipe-275-6286-out
+prwx------ 1 dari dari     0 Jun  8  2022 clr-debug-pipe-275-6645-in
+prwx------ 1 dari dari     0 Jun  8  2022 clr-debug-pipe-275-6645-out
+prwx------ 1 dari dari     0 Jun  2  2022 clr-debug-pipe-279-17043-in
+prwx------ 1 dari dari     0 Jun  2  2022 clr-debug-pipe-279-17043-out
+prwx------ 1 dari dari     0 Nov 22  2021 clr-debug-pipe-3094-17873-in
+prwx------ 1 dari dari     0 Nov 22  2021 clr-debug-pipe-3094-17873-out
+prwx------ 1 dari dari     0 Feb 28  2022 clr-debug-pipe-331-555523-in
+prwx------ 1 dari dari     0 Feb 28  2022 clr-debug-pipe-331-555523-out
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-363-146022-in
+prwx------ 1 dari dari     0 Mar  6  2022 clr-debug-pipe-363-146022-out
+prwx------ 1 dari dari     0 Nov 15  2021 clr-debug-pipe-374-221747-in
+prwx------ 1 dari dari     0 Nov 15  2021 clr-debug-pipe-374-221747-out
+prwx------ 1 dari dari     0 Dec 12  2021 clr-debug-pipe-8374-3933230-in
+prwx------ 1 dari dari     0 Dec 12  2021 clr-debug-pipe-8374-3933230-out
+srw------- 1 dari dari     0 Mar  6  2022 dotnet-diagnostic-1035-337766-socket
+srw------- 1 dari dari     0 Apr 10  2022 dotnet-diagnostic-10573-1293990-socket
+srw------- 1 dari dari     0 Apr 10  2022 dotnet-diagnostic-10980-1387164-socket
+srw------- 1 dari dari     0 Jun 11  2022 dotnet-diagnostic-1169-311480-socket
+srw------- 1 dari dari     0 Jun 11  2022 dotnet-diagnostic-121-1132-socket
+srw------- 1 dari dari     0 Jun  9  2022 dotnet-diagnostic-135-2339-socket
+srw------- 1 dari dari     0 Mar  6  2022 dotnet-diagnostic-137-1068-socket
+srw------- 1 dari dari     0 Apr 10  2022 dotnet-diagnostic-142-1639293-socket
+srw------- 1 dari dari     0 Nov 27  2021 dotnet-diagnostic-142-897-socket
+srw------- 1 dari dari     0 Dec 18  2021 dotnet-diagnostic-144-756-socket
+srw------- 1 dari dari     0 Jun  2  2022 dotnet-diagnostic-147-3118-socket
+srw------- 1 dari dari     0 Nov 27  2021 dotnet-diagnostic-152-1370778-socket
+srw------- 1 dari dari     0 Nov 28  2021 dotnet-diagnostic-154-944-socket
+srw------- 1 dari dari     0 Dec 18  2021 dotnet-diagnostic-158-1183-socket
+srw------- 1 dari dari     0 Jun  9  2022 dotnet-diagnostic-16327-1442509-socket
+srw------- 1 dari dari     0 Jun 11  2022 dotnet-diagnostic-164-1141-socket
+srw------- 1 dari dari     0 Jun  5  2022 dotnet-diagnostic-165-3081-socket
+srw------- 1 dari dari     0 Nov 28  2021 dotnet-diagnostic-166-34390-socket
+srw------- 1 dari dari     0 Dec 23  2021 dotnet-diagnostic-166-843-socket
+srw------- 1 dari dari     0 Jun  9  2022 dotnet-diagnostic-170-1706-socket
+srw------- 1 dari dari     0 Dec 22  2021 dotnet-diagnostic-175-1048-socket
+srw------- 1 dari dari     0 Mar  6  2022 dotnet-diagnostic-175-856-socket
+srw------- 1 dari dari     0 Dec 18  2021 dotnet-diagnostic-179-11679-socket
+srw------- 1 dari dari     0 Jan 10  2022 dotnet-diagnostic-182-27756-socket
+srw------- 1 dari dari     0 Nov 20  2021 dotnet-diagnostic-183-568533-socket
+srw------- 1 dari dari     0 Jan 25  2022 dotnet-diagnostic-183-8232-socket
+srw------- 1 dari dari     0 Nov 26  2021 dotnet-diagnostic-186-11500-socket
+srw------- 1 dari dari     0 Nov 27  2021 dotnet-diagnostic-187-893-socket
+srw------- 1 dari dari     0 Dec  4  2021 dotnet-diagnostic-190-1009-socket
+srw------- 1 dari dari     0 Sep 15 10:02 dotnet-diagnostic-195-5461-socket
+srw------- 1 dari dari     0 Apr 21  2022 dotnet-diagnostic-196-1874-socket
+srw------- 1 dari dari     0 Mar 29  2022 dotnet-diagnostic-196-7368-socket
+srw------- 1 dari dari     0 Nov 29  2021 dotnet-diagnostic-198-1362-socket
+srw------- 1 dari dari     0 Mar  6  2022 dotnet-diagnostic-199-10620-socket
+srw------- 1 dari dari     0 Jun  5  2022 dotnet-diagnostic-202-6925-socket
+srw------- 1 dari dari     0 Dec 20  2021 dotnet-diagnostic-204-4607-socket
+srw------- 1 dari dari     0 Feb 27  2022 dotnet-diagnostic-205-4522-socket
+srw------- 1 dari dari     0 Dec 13  2021 dotnet-diagnostic-206-1328-socket
+srw------- 1 dari dari     0 Mar  6  2022 dotnet-diagnostic-208-141233-socket
+srw------- 1 dari dari     0 Nov 27  2021 dotnet-diagnostic-208-9289-socket
+srw------- 1 dari dari     0 Dec 21  2021 dotnet-diagnostic-219-3485-socket
+srw------- 1 dari dari     0 Jun 13  2022 dotnet-diagnostic-222-3518-socket
+srw------- 1 dari dari     0 Nov 24  2021 dotnet-diagnostic-225-5203-socket
+srw------- 1 dari dari     0 Mar 10  2022 dotnet-diagnostic-226-3054-socket
+srw------- 1 dari dari     0 Apr 14  2022 dotnet-diagnostic-226-4285-socket
+srw------- 1 dari dari     0 Dec 27  2021 dotnet-diagnostic-227-5117-socket
+srw------- 1 dari dari     0 Dec 11  2021 dotnet-diagnostic-228-5372-socket
+srw------- 1 dari dari     0 Nov 26  2021 dotnet-diagnostic-230-2314-socket
+srw------- 1 dari dari     0 May 29  2022 dotnet-diagnostic-236-10062-socket
+srw------- 1 dari dari     0 Jul 16  2022 dotnet-diagnostic-240-2070-socket
+srw------- 1 dari dari     0 Dec 12  2021 dotnet-diagnostic-240-7450-socket
+srw------- 1 dari dari     0 Mar 29  2022 dotnet-diagnostic-255-5346-socket
+srw------- 1 dari dari     0 Nov 20  2021 dotnet-diagnostic-257-89573-socket
+srw------- 1 dari dari     0 Jan 10  2022 dotnet-diagnostic-264-1144-socket
+srw------- 1 dari dari     0 Apr 10  2022 dotnet-diagnostic-268-6448-socket
+srw------- 1 dari dari     0 Jan  4  2022 dotnet-diagnostic-272-4631-socket
+srw------- 1 dari dari     0 Apr 21  2022 dotnet-diagnostic-275-6286-socket
+srw------- 1 dari dari     0 Jun  8  2022 dotnet-diagnostic-275-6645-socket
+srw------- 1 dari dari     0 Jun  2  2022 dotnet-diagnostic-279-17043-socket
+srw------- 1 dari dari     0 Nov 22  2021 dotnet-diagnostic-3094-17873-socket
+srw------- 1 dari dari     0 Feb 28  2022 dotnet-diagnostic-331-555523-socket
+srw------- 1 dari dari     0 Mar  6  2022 dotnet-diagnostic-363-146022-socket
+srw------- 1 dari dari     0 Nov 15  2021 dotnet-diagnostic-374-221747-socket
+srw------- 1 dari dari     0 Dec 12  2021 dotnet-diagnostic-8374-3933230-socket
+drwxrwxrwx 3 dari dari  4096 Nov 27 22:29 loose
+drwx------ 2 dari dari  4096 Oct  5 01:57 pulse-PKdhtXMmr18n
+drwxr-xr-x 3 dari dari  4096 Sep 15 10:02 remote-file-71752ccfe2464e99
+-rw-r--r-- 1 dari dari    69 Dec 22 02:33 remote-wsl-loc.txt
+-rw------- 1 dari dari  2898 Dec 21  2021 vscode-distro-env.0AfhzX
+-rw------- 1 dari dari  2875 Jun  2  2022 vscode-distro-env.0Njwbc
+-rw------- 1 dari dari  2896 Apr 21  2022 vscode-distro-env.1TVw4D
+-rw------- 1 dari dari  2873 Apr 21  2022 vscode-distro-env.3DN5Ld
+-rw------- 1 dari dari  2924 Sep 15 10:02 vscode-distro-env.3uBVEP
+-rw------- 1 dari dari  2898 Nov 24  2021 vscode-distro-env.4AnsUc
+-rw------- 1 dari dari  2896 Apr 14  2022 vscode-distro-env.4UcDoH
+-rw------- 1 dari dari  2959 Nov 27  2021 vscode-distro-env.58baII
+-rw------- 1 dari dari  2930 May  6  2022 vscode-distro-env.6ty8lE
+-rw------- 1 dari dari  2958 Nov 27  2021 vscode-distro-env.7jCmsZ
+-rw------- 1 dari dari  2898 Nov 26  2021 vscode-distro-env.8zPily
+-rw------- 1 dari dari  2881 Oct 20  2021 vscode-distro-env.9FP8Dd
+-rw------- 1 dari dari  2876 Nov 15  2021 vscode-distro-env.9I3EIm
+-rw------- 1 dari dari  2930 Apr 10  2022 vscode-distro-env.9d8fjI
+-rw------- 1 dari dari  2921 Dec 12  2021 vscode-distro-env.9zfVer
+-rw------- 1 dari dari  2946 Nov 27 22:28 vscode-distro-env.AU2UDM
+-rw------- 1 dari dari  2873 Jun  2  2022 vscode-distro-env.B5EIOS
+-rw------- 1 dari dari  2875 Jan 10  2022 vscode-distro-env.BZp7zP
+-rw------- 1 dari dari  2881 Nov  7  2021 vscode-distro-env.Fh4kXw
+-rw------- 1 dari dari  2929 Jun  5  2022 vscode-distro-env.GWeKl1
+-rw------- 1 dari dari  2881 Oct 23  2021 vscode-distro-env.GzXvsX
+-rw------- 1 dari dari  2896 Mar 29  2022 vscode-distro-env.I1rzUM
+-rw------- 1 dari dari  2881 Oct 16  2021 vscode-distro-env.IHRJcC
+-rw------- 1 dari dari  2899 Jan 10  2022 vscode-distro-env.JId6nF
+-rw------- 1 dari dari  2932 Jun  9  2022 vscode-distro-env.KIN0ef
+-rw------- 1 dari dari  3071 Dec  3 14:42 vscode-distro-env.KrXT9T
+-rw------- 1 dari dari  2875 Mar  6  2022 vscode-distro-env.L6uupG
+-rw------- 1 dari dari  2898 Feb 27  2022 vscode-distro-env.LD6d88
+-rw------- 1 dari dari  2881 Oct 23  2021 vscode-distro-env.M517eJ
+-rw------- 1 dari dari  2930 May 29  2022 vscode-distro-env.M8kSt6
+-rw------- 1 dari dari  2990 Apr 10  2022 vscode-distro-env.Mgyyq6
+-rw------- 1 dari dari  2881 Oct 23  2021 vscode-distro-env.NlE0as
+-rw------- 1 dari dari  2881 Oct 20  2021 vscode-distro-env.NmGNHY
+-rw------- 1 dari dari  2951 Jun 13  2022 vscode-distro-env.PGXNmJ
+-rw------- 1 dari dari  2958 Nov 27  2021 vscode-distro-env.Pdqwka
+-rw------- 1 dari dari  2907 Mar 29  2022 vscode-distro-env.Pt4gQS
+-rw------- 1 dari dari  2924 Feb 28  2022 vscode-distro-env.QgICge
+-rw------- 1 dari dari  2921 Dec 11  2021 vscode-distro-env.STq0Xp
+-rw------- 1 dari dari  2876 Apr 14  2022 vscode-distro-env.StrF1C
+-rw------- 1 dari dari  2898 Mar 10  2022 vscode-distro-env.WM2Fzq
+-rw------- 1 dari dari  2881 Oct 23  2021 vscode-distro-env.YQ7aGy
+-rw------- 1 dari dari  2947 Oct 31 00:34 vscode-distro-env.bDJQFp
+-rw------- 1 dari dari  2875 Nov 26  2021 vscode-distro-env.bqDN2v
+-rw------- 1 dari dari  2898 Dec 20  2021 vscode-distro-env.d1Fxer
+-rw------- 1 dari dari  2872 Nov 28 05:19 vscode-distro-env.eQTiGk
+-rw------- 1 dari dari  2914 Mar  6  2022 vscode-distro-env.euMSuu
+-rw------- 1 dari dari  2858 Oct 16  2021 vscode-distro-env.f0kptY
+-rw------- 1 dari dari  2881 Oct 16  2021 vscode-distro-env.fDo5RY
+-rw------- 1 dari dari  2957 Sep 27 10:40 vscode-distro-env.fJ0kms
+-rw------- 1 dari dari  2881 Oct 30  2021 vscode-distro-env.g2qLi4
+-rw------- 1 dari dari  2860 Oct 23  2021 vscode-distro-env.gorVOT
+-rw------- 1 dari dari  2982 Apr 10  2022 vscode-distro-env.k7WeZJ
+-rw------- 1 dari dari  2982 Jan  4  2022 vscode-distro-env.lOogF0
+-rw------- 1 dari dari  2860 Oct 23  2021 vscode-distro-env.lY8GcK
+-rw------- 1 dari dari  2898 Nov 22  2021 vscode-distro-env.mcT1YT
+-rw------- 1 dari dari  2997 Nov  3  2021 vscode-distro-env.mqpMlM
+-rw------- 1 dari dari  2925 Jul 16  2022 vscode-distro-env.nBTe3X
+-rw------- 1 dari dari  2881 Oct 16  2021 vscode-distro-env.oLlxNc
+-rw------- 1 dari dari  2910 Mar  6  2022 vscode-distro-env.oX41It
+-rw------- 1 dari dari  2905 Jun  9  2022 vscode-distro-env.pkv0Cr
+-rw------- 1 dari dari  2900 Jun  5  2022 vscode-distro-env.qz6sBc
+-rw------- 1 dari dari  2959 Dec 27  2021 vscode-distro-env.t8Kzw1
+-rw------- 1 dari dari  2952 Jun  8  2022 vscode-distro-env.wJaKCR
+-rw------- 1 dari dari  2881 Oct 20  2021 vscode-distro-env.we4FbI
+-rw------- 1 dari dari  2924 Feb 28  2022 vscode-distro-env.xWV2Xc
+-rw------- 1 dari dari  2946 Nov 27 22:29 vscode-distro-env.yiX3Gq
+-rw------- 1 dari dari  2937 Jun 11  2022 vscode-distro-env.yoo9X9
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-git-0207558a70.sock
+srwxr-xr-x 1 dari dari     0 Feb 28  2022 vscode-git-037de8947f.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-git-112ab59bcb.sock
+srwxr-xr-x 1 dari dari     0 Dec 12  2021 vscode-git-17c780075b.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-git-1963687ec5.sock
+srwxr-xr-x 1 dari dari     0 Nov 10  2021 vscode-git-19e75f6af8.sock
+srwxr-xr-x 1 dari dari     0 Dec 13  2021 vscode-git-1cb851dfcf.sock
+srwxr-xr-x 1 dari dari     0 Nov 28  2021 vscode-git-1e8ba55914.sock
+srwxr-xr-x 1 dari dari     0 Mar 10  2022 vscode-git-2096952838.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-git-2a6507738a.sock
+srwxr-xr-x 1 dari dari     0 Nov 28  2021 vscode-git-2b57af7b77.sock
+srwxr-xr-x 1 dari dari     0 Oct 30  2021 vscode-git-2b5cce445f.sock
+srwxr-xr-x 1 dari dari     0 Nov 20  2021 vscode-git-36285cc1b4.sock
+srwxr-xr-x 1 dari dari     0 Nov 15  2021 vscode-git-37208dee93.sock
+srwxr-xr-x 1 dari dari     0 Jan 10  2022 vscode-git-3d221299c0.sock
+srwxr-xr-x 1 dari dari     0 Dec 11  2021 vscode-git-40bf25a611.sock
+srwxr-xr-x 1 dari dari     0 Oct 16  2021 vscode-git-4732e09ea9.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-git-49d53015aa.sock
+srwxr-xr-x 1 dari dari     0 Apr 14  2022 vscode-git-4cc84ecbc3.sock
+srwxr-xr-x 1 dari dari     0 Nov 20  2021 vscode-git-52d4736354.sock
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 vscode-git-5de2f88b97.sock
+srwxr-xr-x 1 dari dari     0 Dec 20  2021 vscode-git-60efb9abcb.sock
+srwxr-xr-x 1 dari dari     0 Jan 10  2022 vscode-git-61b9da1c81.sock
+srwxr-xr-x 1 dari dari     0 Oct 23  2021 vscode-git-68493a28d7.sock
+srwxr-xr-x 1 dari dari     0 Nov  7  2021 vscode-git-6a4e40800d.sock
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 vscode-git-6d840ae48b.sock
+srwxr-xr-x 1 dari dari     0 Dec  4  2021 vscode-git-73b6af737a.sock
+srwxr-xr-x 1 dari dari     0 Jul 16  2022 vscode-git-742d1d28aa.sock
+srwxr-xr-x 1 dari dari     0 Nov 26  2021 vscode-git-78936d270c.sock
+srwxr-xr-x 1 dari dari     0 Oct 16  2021 vscode-git-7a563d389a.sock
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 vscode-git-7c13eb86d9.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-git-8029a40710.sock
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 vscode-git-82928dcf4c.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-git-882e23d634.sock
+srwxr-xr-x 1 dari dari     0 Nov 29  2021 vscode-git-8f54658281.sock
+srwxr-xr-x 1 dari dari     0 Feb 27  2022 vscode-git-91aa83d01d.sock
+srwxr-xr-x 1 dari dari     0 Apr 21  2022 vscode-git-944119099c.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-git-96ddaa97ad.sock
+srwxr-xr-x 1 dari dari     0 Apr 21  2022 vscode-git-990e6f789d.sock
+srwxr-xr-x 1 dari dari     0 Nov 26  2021 vscode-git-991e797573.sock
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-git-9b5ba7b9ff.sock
+srwxr-xr-x 1 dari dari     0 Jan 25  2022 vscode-git-9f2116a3ab.sock
+srwxr-xr-x 1 dari dari     0 Nov 27 22:29 vscode-git-a82f8640b5.sock
+srwxr-xr-x 1 dari dari     0 Nov 24  2021 vscode-git-b6c8c20f01.sock
+srwxr-xr-x 1 dari dari     0 Nov  3  2021 vscode-git-be04186423.sock
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 vscode-git-c176fe358b.sock
+srwxr-xr-x 1 dari dari     0 Dec 27  2021 vscode-git-c2834b4bd2.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-git-cb493998be.sock
+srwxr-xr-x 1 dari dari     0 Dec 21  2021 vscode-git-cb526207bb.sock
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-git-cc8cf45122.sock
+srwxr-xr-x 1 dari dari     0 Nov 22  2021 vscode-git-d915fccb97.sock
+srwxr-xr-x 1 dari dari     0 Oct 20  2021 vscode-git-db21d8601a.sock
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 vscode-git-ddd9985e77.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-git-e193a74ca0.sock
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-git-e5bd278b5b.sock
+srwxr-xr-x 1 dari dari     0 Dec 23  2021 vscode-git-ed5c11caa3.sock
+srwxr-xr-x 1 dari dari     0 Nov 22  2021 vscode-git-ef12f4b4ee.sock
+srwxr-xr-x 1 dari dari     0 May  6  2022 vscode-git-f765e31615.sock
+srwxr-xr-x 1 dari dari     0 Dec 22  2021 vscode-git-f88ac9aabc.sock
+srwxr-xr-x 1 dari dari     0 Dec 12  2021 vscode-git-f98c6ec502.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-git-fb45ec5a5c.sock
+srwxr-xr-x 1 dari dari     0 Nov 14  2021 vscode-git-feb57dd1d4.sock
+srwxr-xr-x 1 dari dari     0 Jan  4  2022 vscode-git-fec4d9f1c8.sock
+srwxr-xr-x 1 dari dari     0 Nov 29  2021 vscode-ipc-0108b6c7-0f14-4ea5-b519-6121e0840a6c.sock
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-ipc-020947cb-e8ec-4b35-a2a3-0521ca1f7527.sock
+srwxr-xr-x 1 dari dari     0 Oct 16  2021 vscode-ipc-025ad33d-82d3-41a1-995a-a2e9d10dd0b6.sock
+srwxr-xr-x 1 dari dari     0 Jun  5  2022 vscode-ipc-0bc64486-b243-46bb-910c-8e7c3b99a9c4.sock
+srwxr-xr-x 1 dari dari     0 Nov 28  2021 vscode-ipc-0e045d8f-87ee-4e2f-9613-969611d7df80.sock
+srwxr-xr-x 1 dari dari     0 Jun  5  2022 vscode-ipc-0e3cbd8a-1653-4f5f-beac-5094739466d1.sock
+srwxr-xr-x 1 dari dari     0 Jun 11  2022 vscode-ipc-0f51e8fa-f5c5-4110-ab64-162e4088e94c.sock
+srwxr-xr-x 1 dari dari     0 Oct 20  2021 vscode-ipc-106df436-a4e8-4da0-8a41-6138df01aa35.sock
+srwxr-xr-x 1 dari dari     0 Jul 16  2022 vscode-ipc-1120a951-3cff-41e4-a416-786c44b3915f.sock
+srwxr-xr-x 1 dari dari     0 Oct 16  2021 vscode-ipc-1262dffa-ce89-4ce7-9ba1-bb1798248d7a.sock
+srwxr-xr-x 1 dari dari     0 Jan 25  2022 vscode-ipc-1352fbf3-e4aa-44e8-a619-326df8852a2b.sock
+srwxr-xr-x 1 dari dari     0 Feb 27  2022 vscode-ipc-15a934f3-c93a-4d26-8eb6-ab69c948fa33.sock
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 vscode-ipc-15c03279-e2a4-4529-ae8e-90b2cd3424e3.sock
+srwxr-xr-x 1 dari dari     0 Dec 12  2021 vscode-ipc-17b60196-dc6b-40a5-8a1c-93639d732c04.sock
+srwxr-xr-x 1 dari dari     0 Jun 11  2022 vscode-ipc-17cddf3a-5f2c-4f80-a6a5-17e150f83bf1.sock
+srwxr-xr-x 1 dari dari     0 Jun  2  2022 vscode-ipc-189f3b68-08dc-4f08-88e1-77ddfcb422de.sock
+srwxr-xr-x 1 dari dari     0 Nov 28 05:19 vscode-ipc-1fa3abd1-ee75-4d62-bbd8-74479d8e1711.sock
+srwxr-xr-x 1 dari dari     0 May 29  2022 vscode-ipc-2af12064-0839-4374-b1d8-9ee99952a274.sock
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 vscode-ipc-2e8848ea-d93d-4f09-9d05-f45daf79c703.sock
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 vscode-ipc-2e9df3f0-d7e4-455c-8303-dc279a1a14ef.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-ipc-2f9a541b-042c-4f4f-8270-73462a1b0fdf.sock
+srwxr-xr-x 1 dari dari     0 Jan 10  2022 vscode-ipc-38d9fa13-eb05-4f21-98f1-daef25a56364.sock
+srwxr-xr-x 1 dari dari     0 Apr 14  2022 vscode-ipc-3b37f1b7-51b4-4a0a-b958-ee29796a2771.sock
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 vscode-ipc-3badee1d-e95d-43a9-b470-6153376372bc.sock
+srwxr-xr-x 1 dari dari     0 Mar 10  2022 vscode-ipc-3d3b5e70-9c66-4219-b807-209ab563bb08.sock
+srwxr-xr-x 1 dari dari     0 Jul 16  2022 vscode-ipc-3e76585f-31a1-4927-96ef-30a7f00e383a.sock
+srwxr-xr-x 1 dari dari     0 Dec 13  2021 vscode-ipc-48d5a7cb-6012-49ac-97ad-79f7fef7c325.sock
+srwxr-xr-x 1 dari dari     0 Dec 21  2021 vscode-ipc-4af84b0b-841a-4166-8f24-d31dfff973b2.sock
+srwxr-xr-x 1 dari dari     0 Nov 20  2021 vscode-ipc-4d375f05-2702-4732-a593-975ca35b99cf.sock
+srwxr-xr-x 1 dari dari     0 Nov 24  2021 vscode-ipc-51423295-c19a-4ca0-b5a9-c1cff52543b8.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-ipc-5173a7d2-c6eb-4740-b2b2-8320746126ad.sock
+srwxr-xr-x 1 dari dari     0 Feb 28  2022 vscode-ipc-547e7aea-bfc6-4094-b9b9-a745ec917785.sock
+srwxr-xr-x 1 dari dari     0 Dec 13  2021 vscode-ipc-550ba942-6665-4227-a0d8-8790f5b530aa.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-ipc-562ba7c9-8922-4db1-a5ff-f313603dd478.sock
+srwxr-xr-x 1 dari dari     0 Nov 30 00:48 vscode-ipc-5bd4dd55-faa8-4e3c-b8ad-eb3c81c1e388.sock
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-ipc-5d704972-afff-43d2-9c74-1b5aa0db9c9c.sock
+srwxr-xr-x 1 dari dari     0 Nov 15  2021 vscode-ipc-5da0ab8a-639f-4128-af5a-b9927d490407.sock
+srwxr-xr-x 1 dari dari     0 Dec  4  2021 vscode-ipc-60a1c3ad-8c9b-4ea5-8be3-cc018cd34b80.sock
+srwxr-xr-x 1 dari dari     0 Nov 30 21:52 vscode-ipc-610f55c0-fe04-416d-b82e-1ab8604e64e0.sock
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 vscode-ipc-624f6fed-2431-47c4-98b4-9587ba026a40.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-ipc-64a29068-332e-43b2-9206-772307be0248.sock
+srwxr-xr-x 1 dari dari     0 Dec 23  2021 vscode-ipc-66a04cee-ea91-42dd-919b-7e158816db73.sock
+srwxr-xr-x 1 dari dari     0 Dec  3 14:42 vscode-ipc-677579fd-afd1-4744-a9fe-558fc231b09d.sock
+srwxr-xr-x 1 dari dari     0 Dec 11  2021 vscode-ipc-68bb3f24-6053-4d1b-860b-03abe47de6a5.sock
+srwxr-xr-x 1 dari dari     0 Dec  4  2021 vscode-ipc-68df27e2-ca74-414d-8cad-acb4efcedf1a.sock
+srwxr-xr-x 1 dari dari     0 Dec 22  2021 vscode-ipc-6e863af9-eee9-44de-aef4-7bcd68df83aa.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-ipc-7086a6cc-f2f9-4dad-9126-a52a04884ae8.sock
+srwxr-xr-x 1 dari dari     0 Nov 29  2021 vscode-ipc-79564467-10d6-467b-b212-c50023c52743.sock
+srwxr-xr-x 1 dari dari     0 Dec 12  2021 vscode-ipc-7bfb2926-6a78-4b47-9e57-b87709c1aac6.sock
+srwxr-xr-x 1 dari dari     0 Nov 10  2021 vscode-ipc-7c97e4ea-b82c-4cf1-9b40-e75745dd07a4.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-ipc-7e1aba2b-beab-413b-a71b-f7401f77ebef.sock
+srwxr-xr-x 1 dari dari     0 Jun  5  2022 vscode-ipc-7e7db868-0753-4900-8754-0b7077d35931.sock
+srwxr-xr-x 1 dari dari     0 Dec  8 12:23 vscode-ipc-7f956567-b188-4693-b20a-d2bc1f553ae1.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-ipc-8454eac1-5959-4b85-8dfa-f7554b752301.sock
+srwxr-xr-x 1 dari dari     0 Jun 13  2022 vscode-ipc-85d6c7e9-8de7-428f-be27-e4b7888345f1.sock
+srwxr-xr-x 1 dari dari     0 Dec 12  2021 vscode-ipc-8b47d5b4-9dba-4f4e-ab20-65638c64b401.sock
+srwxr-xr-x 1 dari dari     0 Nov 14  2021 vscode-ipc-8f4af52e-a1b9-4257-9b6d-f252a1a3f7a6.sock
+srwxr-xr-x 1 dari dari     0 Jun  8  2022 vscode-ipc-8f5371aa-982b-4890-ad35-9905c94b571a.sock
+srwxr-xr-x 1 dari dari     0 Nov 26  2021 vscode-ipc-90bf3298-51f2-42ba-840d-5c0ce3dda728.sock
+srwxr-xr-x 1 dari dari     0 Dec 27  2021 vscode-ipc-99e9607b-1587-4c8d-a53b-6cb514c70115.sock
+srwxr-xr-x 1 dari dari     0 Nov 26  2021 vscode-ipc-9e7b3e0b-7e5b-4a3e-bdf3-3034d6c0125b.sock
+srwxr-xr-x 1 dari dari     0 Nov 28  2021 vscode-ipc-a3cb3e8e-7307-4bca-8745-57ea2bddc89f.sock
+srwxr-xr-x 1 dari dari     0 Dec 18  2021 vscode-ipc-a7300e33-4ffc-4ab2-a9c8-3c59f57fdd17.sock
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 vscode-ipc-a9500193-b5a2-4ed1-9dda-19c43c8106f8.sock
+srwxr-xr-x 1 dari dari     0 Jun  2  2022 vscode-ipc-b529ed09-dabd-4ffc-9133-534e8c2604f0.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-ipc-b59ccb05-c681-4b5d-a63d-863b0e9af5d7.sock
+srwxr-xr-x 1 dari dari     0 May  6  2022 vscode-ipc-b5c731f8-7757-484d-b74b-84bd5be6377a.sock
+srwxr-xr-x 1 dari dari     0 Apr 21  2022 vscode-ipc-b6feeb7a-f8fa-48e2-b179-509b26d7f7e8.sock
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 vscode-ipc-b8d9c457-a74b-4579-8188-13fa9245cd8f.sock
+srwxr-xr-x 1 dari dari     0 Nov 22  2021 vscode-ipc-b92a1346-0b02-491f-abc0-feac191a72d9.sock
+srwxr-xr-x 1 dari dari     0 Apr 21  2022 vscode-ipc-b9cb9fc7-008c-4d58-b86d-684d07431614.sock
+srwxr-xr-x 1 dari dari     0 Dec  7 13:30 vscode-ipc-bc268cf0-aadc-4f99-9eb5-a03073c3fc16.sock
+srwxr-xr-x 1 dari dari     0 Oct 23  2021 vscode-ipc-bd8458b2-3b42-434a-9317-5b36c5e92e98.sock
+srwxr-xr-x 1 dari dari     0 Sep 15 10:02 vscode-ipc-be377d2b-2b34-47eb-ab4a-683e6f3768d4.sock
+srwxr-xr-x 1 dari dari     0 Sep 27 10:40 vscode-ipc-c1a64939-9fad-4565-888b-fdab0ada677d.sock
+srwxr-xr-x 1 dari dari     0 Nov  7  2021 vscode-ipc-c217b7ea-68b7-435e-acc0-a159df66d8a1.sock
+srwxr-xr-x 1 dari dari     0 Jan 10  2022 vscode-ipc-c399a93b-c829-4b25-9dd8-07d6eadc5206.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-ipc-c3ae022c-be04-45f1-92fa-c76322b1d142.sock
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-ipc-cc52be42-6c89-44d7-917b-45e31a82b6d5.sock
+srwxr-xr-x 1 dari dari     0 Jun  9  2022 vscode-ipc-cf0f7f3d-fdf6-4ee6-9fe0-ad2f16b24110.sock
+srwxr-xr-x 1 dari dari     0 Nov 27 22:29 vscode-ipc-cfdb3356-1ea6-4e54-821f-d33fe3fd419a.sock
+srwxr-xr-x 1 dari dari     0 Nov 22  2021 vscode-ipc-d2096071-5255-4342-ab31-071ec028603e.sock
+srwxr-xr-x 1 dari dari     0 Nov 27  2021 vscode-ipc-dd85287a-691a-4f40-add4-61f908ab5618.sock
+srwxr-xr-x 1 dari dari     0 Oct 31 00:34 vscode-ipc-de6e4bf8-df98-44be-87de-ed304483cde2.sock
+srwxr-xr-x 1 dari dari     0 Jan  4  2022 vscode-ipc-deb7ed78-0469-4053-adfa-758fd453279c.sock
+srwxr-xr-x 1 dari dari     0 Nov 29  2021 vscode-ipc-e168cbb4-c2c4-48b2-8a85-7992a4e0e606.sock
+srwxr-xr-x 1 dari dari     0 Nov 26  2021 vscode-ipc-e6c65321-694a-4e29-86db-139e01901264.sock
+srwxr-xr-x 1 dari dari     0 Mar  6  2022 vscode-ipc-e9439230-6781-46c4-8f43-5ae3c9f4c0cf.sock
+srwxr-xr-x 1 dari dari     0 Nov 29  2021 vscode-ipc-ea5994cf-a7da-432b-b3e9-060c131c244a.sock
+srwxr-xr-x 1 dari dari     0 Nov  3  2021 vscode-ipc-ee518901-6c57-4da6-a692-95a28505d14b.sock
+srwxr-xr-x 1 dari dari     0 Oct 30  2021 vscode-ipc-eff61c31-c740-49a3-aa78-dfc1b6406f54.sock
+srwxr-xr-x 1 dari dari     0 Jun 11  2022 vscode-ipc-f52093a8-ace4-422a-bf93-c5d1bcd7bb37.sock
+srwxr-xr-x 1 dari dari     0 Mar 29  2022 vscode-ipc-f6c20116-dcb3-4507-b8f8-b0f339667f5e.sock
+srwxr-xr-x 1 dari dari     0 Nov 20  2021 vscode-ipc-f7691f4c-56f4-4931-b6df-e699f7d428f7.sock
+srwxr-xr-x 1 dari dari     0 Apr 10  2022 vscode-ipc-f7cff662-7150-4cd2-b270-4302b211969d.sock
+srwxr-xr-x 1 dari dari     0 Dec 20  2021 vscode-ipc-fbcc24f3-2d3f-4a9e-987a-def7c05e3637.sock
+drwxr-xr-x 2 dari dari  4096 Nov 28 05:57 vscode-typescript1000
+				//Вывод всех файлов в /tmp, не принадлежащих root
+2. 1)$ ps | cut -d " " -f 3
+565
+715
+716 				// номера запущенных процессов 
+
+2)$ cat /etc/passwd | cut -d ":" -f 3
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+13
+33
+34
+38
+39
+41
+65534
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+1000
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121 				//Идентификаторы пользователей, имеющих x-терминалы на 
+				рабочей станции
+
+3)$ whoami
+dari				// Вывод входного имени в системе 
+
+
+3. $ ls -l | tr [:lower:] [:upper:]
+TOTAL 64
+-RWXR-XR-X 1 DARI DARI 16704 FEB 13 23:45 FILE_NAME
+-RW-R--R-- 1 DARI DARI   100 FEB 13 23:42 FILE_NAME.C
+-RWXR-XR-X 1 DARI DARI 16744 FEB 13 23:45 MY_OPEN
+-RW-R--R-- 1 DARI DARI   397 FEB 13 23:32 MY_OPEN.C
+-RW-R--R-- 1 DARI DARI    14 FEB 13 22:12 MYFILE.TXT
+-RW-R--R-- 1 DARI DARI    68 FEB 13 23:16 PROG.C
+-RW-R--R-- 1 DARI DARI  1696 FEB 13 23:16 PROG.O
+-RW-R--R-- 1 DARI DARI    19 FEB 13 23:23 RES
+-RW-R--R-- 1 DARI DARI     0 FEB 13 23:30 TEST_FILE
+				// Выведена информация о файлах прописными буквами
+4.
+1)$ ls -l | sort
+-rw-r--r-- 1 dari dari     0 Feb 13 23:30 test_file
+-rw-r--r-- 1 dari dari    14 Feb 13 22:12 myfile.txt
+-rw-r--r-- 1 dari dari    19 Feb 13 23:23 res
+-rw-r--r-- 1 dari dari    68 Feb 13 23:16 prog.c
+-rw-r--r-- 1 dari dari   100 Feb 13 23:42 file_name.c
+-rw-r--r-- 1 dari dari   397 Feb 13 23:32 my_open.c
+-rw-r--r-- 1 dari dari  1696 Feb 13 23:16 prog.o
+-rwxr-xr-x 1 dari dari 16704 Feb 13 23:45 file_name
+-rwxr-xr-x 1 dari dari 16744 Feb 13 23:45 my_open
+total 64			// Сортировка файлов в текущем каталоге в алфавитном порядке
+2)$ ls -l | sort -n
+-rw-r--r-- 1 dari dari     0 Feb 13 23:30 test_file
+-rw-r--r-- 1 dari dari    14 Feb 13 22:12 myfile.txt
+-rw-r--r-- 1 dari dari    19 Feb 13 23:23 res
+-rw-r--r-- 1 dari dari    68 Feb 13 23:16 prog.c
+-rw-r--r-- 1 dari dari   100 Feb 13 23:42 file_name.c
+-rw-r--r-- 1 dari dari   397 Feb 13 23:32 my_open.c
+-rw-r--r-- 1 dari dari  1696 Feb 13 23:16 prog.o
+-rwxr-xr-x 1 dari dari 16704 Feb 13 23:45 file_name
+-rwxr-xr-x 1 dari dari 16744 Feb 13 23:45 my_open
+total 64 			// Сортировка файлов в текущем каталоге в порядке увеличения размера файлов
+3)$ ls -l | sort -n -r
+total 64
+-rwxr-xr-x 1 dari dari 16744 Feb 13 23:45 my_open
+-rwxr-xr-x 1 dari dari 16704 Feb 13 23:45 file_name
+-rw-r--r-- 1 dari dari  1696 Feb 13 23:16 prog.o
+-rw-r--r-- 1 dari dari   397 Feb 13 23:32 my_open.c
+-rw-r--r-- 1 dari dari   100 Feb 13 23:42 file_name.c
+-rw-r--r-- 1 dari dari    68 Feb 13 23:16 prog.c
+-rw-r--r-- 1 dari dari    19 Feb 13 23:23 res
+-rw-r--r-- 1 dari dari    14 Feb 13 22:12 myfile.txt
+-rw-r--r-- 1 dari dari     0 Feb 13 23:30 test_file
+				// Сортировка файлов в текущем каталоге в порядке уменьшения размеров файлов
+5.$ ls -l /usr/bin | cut -b 27-34 | uniq -d
+     433
+     144
+    4418
+     269
+       3
+      81
+     144
+     350
+      38
+     145
+     802
+     146
+     188
+     144
+     678
+     433
+     390
+       3
+      56
+     215
+       3
+     515
+     144
+     148
+     597
+     679
+     185
+       7
+     184
+       3
+     145
+     146
+     102			// Повторяющиеся размеры файлов из каталога с /usr/bin, полученные 
+
+6.$ cmp prog.c my_open.c
+prog.c my_open.c differ: byte 20, line 2
+				// Результат сравнения файлов prog.c и my__open.c 
+
+$ cmp prog.o my_open.o
+prog.o my_open.o differ: byte 41, line 1 
+				// Результат сравнения файлов prog.o и my__open.o
+
+7.$ diff -e prog.c my_open.c > eqv
+Используя команду: diff -e prog.c my_open.c 
+получим такое содержимое файла eqv:
+
+2,4c
+int main ( argc, argv )
+int argc;
+char *argv [];
+{
+    if (argc > 1) {
+        if (fopen(argv[1],"r") == NULL) {
+            printf("%s: неудача при попытке открыть файл %s",argv[0],argv[1]);
+        }
+        else {
+            printf("%s: файл %s открыт",argv[0],argv[1]);
+        }
+    } else {
+        printf("открываемый файл не указан");
+    }
+}
+
+.
+Вывод говорит о том, что первый файл расходится со второй строки по четвертую относительно второго файла. 
+Диапазон от 2 до 4 обусловлен тем, что в первом файле всего 4 строки.
+И также вывод показывает все строки второго файла, которые отличаются от первого файла. 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+  <title>Тетрис</title>
+  <style>
+    body {
+      background-image: url('11.jpg');
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .header {
+      font-family: "Comic Sans MS";
+      font-size: 44px;
+      color: rgb(252, 205, 151);
+      text-shadow: 2px 2px 4px rgb(90, 90, 90);
+      margin-top: 0;
+    }
+
+    .header2 {
+      font-family: "Comic Sans MS";
+      font-size: 44px;
+      text-shadow: 2px 2px 4px rgb(90, 90, 90);
+      color: rgb(252, 205, 151);
+      margin-top: 0;
+    }
+
+    .button {
+      background-color: rgb(252, 205, 151);
+      color: white;
+      text-shadow: 2px 2px 4px rgb(90, 90, 90);
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      font-family: "Comic Sans MS";
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="header">Форма для регистрации</h1><br>
+  <form action="index.html" method="get">
+    <label>
+      Введите имя:<br>
+      <input id="user" placeholder="Имя пользователя"><br>
+      <script>
+        window.addEventListener("DOMContentLoaded", function () {
+          var savedUsername = localStorage.getItem("username");
+          if (savedUsername) {
+            document.getElementById("user").value = savedUsername;
+          }
+        });</script>
+    </label>
+    <input class="button" type="submit" value="Ввод" onclick="saveName()">
+  </form>
+  <script>
+    function saveName() {
+      localStorage["username"] = document.getElementById("user").value;
+    } 
+  </script>
+  <h2 class="header2">Удачи!!!</h2>
+</body>
+
+</html>

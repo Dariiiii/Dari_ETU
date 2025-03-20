@@ -1,0 +1,208 @@
+[Variables]
+VarNm=3
+Var 1=Обороты
+Low=  0.00
+High= 8000.00
+Measr=об
+[Terms]
+Terms= 5
+Term1=Очень малые
+Low=  0.00
+High= 2000.00
+Left=  0.00
+Right= 1000.00
+
+Term2=Малые
+Low=  0.00
+High= 4000.00
+Left= 2000.00
+Right= 3000.00
+
+Term3=Средние
+Low=  0.00
+High= 5000.00
+Left= 4000.00
+Right= 4000.00
+
+Term4=Большие
+Low=  0.00
+High= 7000.00
+Left= 5000.00
+Right= 6000.00
+
+Term5=Очень большие
+Low=  0.00
+High= 8000.00
+Left= 7500.00
+Right= 8000.00
+
+[Influences]
+Infls= 2
+Infl1=Увеличить
+Conf=0.40
+Power=
+0.10 1.00 0.20 0.00 0.00 
+0.00 0.10 1.00 0.20 0.00 
+0.00 0.00 0.10 1.00 0.20 
+0.00 0.00 0.00 0.10 1.00 
+0.00 0.00 0.00 0.00 1.00 
+
+[Prohibited]
+ProhN=0
+
+[Evoked]
+EvokN=0
+
+Infl2=Уменьшить
+Conf=0.80
+Power=
+1.00 0.00 0.00 0.00 0.00 
+1.00 0.10 0.00 0.00 0.00 
+0.20 1.00 0.10 0.00 0.00 
+0.00 0.20 1.00 0.10 0.00 
+0.00 0.00 0.20 1.00 0.10 
+
+[Prohibited]
+ProhN=0
+
+[Evoked]
+EvokN=0
+
+
+Var 2=Передача
+Low=  1.00
+High=  4.00
+Measr=
+[Terms]
+Terms= 4
+Term1=1
+Low=  1.00
+High=  2.00
+Left=  1.00
+Right=  1.00
+
+Term2=2
+Low=  1.00
+High=  3.00
+Left=  2.00
+Right=  2.00
+
+Term3=3
+Low=  2.00
+High=  4.00
+Left=  3.00
+Right=  3.00
+
+Term4=4
+Low=  3.00
+High=  4.00
+Left=  4.00
+Right=  4.00
+
+[Influences]
+Infls= 2
+Infl1=Повысить
+Conf=0.50
+Power=
+0.05 1.00 0.10 0.00 
+0.00 0.05 1.00 0.10 
+0.00 0.00 0.05 1.00 
+0.00 0.00 0.00 1.00 
+
+[Prohibited]
+ProhN=0
+
+[Evoked]
+EvokN=1
+Evk 1= 1 2
+
+Infl2=Понизить
+Conf=0.50
+Power=
+1.00 0.00 0.00 0.00 
+1.00 0.05 0.00 0.00 
+0.10 1.00 0.05 0.00 
+0.00 0.10 1.00 0.05 
+
+[Prohibited]
+ProhN=0
+
+[Evoked]
+EvokN=0
+
+
+Var 3=Расстояние до обочины
+Low=  0.00
+High= 10.00
+Measr=м
+[Terms]
+Terms= 5
+Term1=Очень малое
+Low=  0.00
+High=  3.00
+Left=  0.00
+Right=  1.00
+
+Term2=Малое
+Low=  2.00
+High=  5.00
+Left=  3.00
+Right=  4.00
+
+Term3=Среднее
+Low=  4.00
+High=  6.00
+Left=  5.00
+Right=  5.00
+
+Term4=Большое
+Low=  5.00
+High=  8.00
+Left=  6.00
+Right=  7.00
+
+Term5=Очень большое
+Low=  6.00
+High= 10.00
+Left=  9.00
+Right= 10.00
+
+[Influences]
+Infls= 2
+Infl1=Увеличить
+Conf=0.90
+Power=
+0.00 0.20 1.00 0.10 0.00 
+0.00 0.00 0.20 1.00 0.10 
+0.00 0.00 0.00 0.20 1.00 
+0.00 0.00 0.00 0.00 1.00 
+0.00 0.00 0.00 0.00 1.00 
+
+[Prohibited]
+ProhN=0
+
+[Evoked]
+EvokN=0
+
+Infl2=Уменьшить
+Conf=0.40
+Power=
+1.00 0.00 0.00 0.00 0.00 
+1.00 0.20 0.00 0.00 0.00 
+0.10 1.00 0.20 0.00 0.00 
+0.00 0.10 1.00 0.20 0.00 
+0.00 0.00 0.10 1.00 0.20 
+
+[Prohibited]
+ProhN=0
+
+[Evoked]
+EvokN=0
+
+
+[Couples of Situations]
+SitNm=1
+Sit 1=Близко к обочине
+Confl= 5 4 1
+Targt= 4 4 2
+

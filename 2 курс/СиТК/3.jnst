@@ -1,0 +1,330 @@
+PC1
+GuiPC
+262,292
+true
+2
+cua0|1|null|100.00
+eth0|0|PC1(eth0) - Hub2(eth2)|100.0|BF:66:29:16:B2:47|true
+#config
+hostname PC1
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+Router2
+GuiRouter
+543,318
+true
+4
+cua0|1|null|100.00
+eth0|0|Hub4(eth3) - Router2(eth0)|100.0|78:9A:AC:54:B5:60|true
+eth1|0|Router2(eth1) - Router1(eth1)|100.0|B6:A6:9A:45:24:25|true
+eth2|0|Router2(eth2) - Hub3(eth3)|100.0|19:3D:12:46:36:33|true
+#config
+hostname Router2
+no interface eth2 shutdown
+no interface eth1 shutdown
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+Router1
+GuiRouter
+543,199
+true
+4
+cua0|1|null|100.00
+eth0|0|Hub1(eth3) - Router1(eth0)|100.0|43:40:3F:7C:52:97|true
+eth1|0|Router2(eth1) - Router1(eth1)|100.0|3F:42:75:2E:1D:5B|true
+eth2|0|Hub2(eth3) - Router1(eth2)|100.0|52:8E:5B:59:1B:33|true
+#config
+hostname Router1
+no interface eth2 shutdown
+no interface eth1 shutdown
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC12
+GuiPC
+824,315
+true
+2
+cua0|1|null|100.00
+eth0|0|PC12(eth0) - Hub3(eth2)|100.0|52:45:AF:BE:21:32|true
+#config
+hostname PC12
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC11
+GuiPC
+823,240
+true
+2
+cua0|1|null|100.00
+eth0|0|PC11(eth0) - Hub3(eth1)|100.0|8B:57:44:B0:AE:B5|true
+#config
+hostname PC11
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC10
+GuiPC
+823,162
+true
+2
+cua0|1|null|100.00
+eth0|0|PC10(eth0) - Hub3(eth0)|100.0|99:75:70:B6:4B:C5|true
+#config
+hostname PC10
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+Hub4
+GuiHub
+542,417
+true
+5
+eth0|0|PC7(eth0) - Hub4(eth0)|100.0|#|false
+eth1|0|PC8(eth0) - Hub4(eth1)|100.0|#|false
+eth2|0|PC9(eth0) - Hub4(eth2)|100.0|#|false
+eth3|0|Hub4(eth3) - Router2(eth0)|100.0|#|false
+eth4|0|null|100.00|#|false
+#config
+#endconfig
+#data
+#enddata
+Hub3
+GuiHub
+737,203
+true
+5
+eth0|0|PC10(eth0) - Hub3(eth0)|100.0|#|false
+eth1|0|PC11(eth0) - Hub3(eth1)|100.0|#|false
+eth2|0|PC12(eth0) - Hub3(eth2)|100.0|#|false
+eth3|0|Router2(eth2) - Hub3(eth3)|100.0|#|false
+eth4|0|null|100.00|#|false
+#config
+#endconfig
+#data
+#enddata
+Hub2
+GuiHub
+378,193
+true
+5
+eth0|0|PC3(eth0) - Hub2(eth0)|100.0|#|false
+eth1|0|PC2(eth0) - Hub2(eth1)|100.0|#|false
+eth2|0|PC1(eth0) - Hub2(eth2)|100.0|#|false
+eth3|0|Hub2(eth3) - Router1(eth2)|100.0|#|false
+eth4|0|null|100.00|#|false
+#config
+#endconfig
+#data
+#enddata
+Hub1
+GuiHub
+542,104
+true
+5
+eth0|0|PC4(eth0) - Hub1(eth0)|100.0|#|false
+eth1|0|PC5(eth0) - Hub1(eth1)|100.0|#|false
+eth2|0|PC6(eth0) - Hub1(eth2)|100.0|#|false
+eth3|0|Hub1(eth3) - Router1(eth0)|100.0|#|false
+eth4|0|null|100.00|#|false
+#config
+#endconfig
+#data
+#enddata
+PC9
+GuiPC
+628,520
+true
+2
+cua0|1|null|100.00
+eth0|0|PC9(eth0) - Hub4(eth2)|100.0|53:74:47:57:C0:B8|true
+#config
+hostname PC9
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC8
+GuiPC
+542,528
+true
+2
+cua0|1|null|100.00
+eth0|0|PC8(eth0) - Hub4(eth1)|100.0|AE:A4:B9:4D:68:6B|true
+#config
+hostname PC8
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC7
+GuiPC
+436,520
+true
+2
+cua0|1|null|100.00
+eth0|0|PC7(eth0) - Hub4(eth0)|100.0|69:39:98:BE:A3:15|true
+#config
+hostname PC7
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC6
+GuiPC
+636,24
+true
+2
+cua0|1|null|100.00
+eth0|0|PC6(eth0) - Hub1(eth2)|100.0|AB:2A:40:96:79:A8|true
+#config
+hostname PC6
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC5
+GuiPC
+542,24
+true
+2
+cua0|1|null|100.00
+eth0|0|PC5(eth0) - Hub1(eth1)|100.0|40:AC:1A:A4:3C:54|true
+#config
+hostname PC5
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC4
+GuiPC
+447,23
+true
+2
+cua0|1|null|100.00
+eth0|0|PC4(eth0) - Hub1(eth0)|100.0|52:9F:80:B7:5A:B4|true
+#config
+hostname PC4
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC3
+GuiPC
+264,117
+true
+2
+cua0|1|null|100.00
+eth0|0|PC3(eth0) - Hub2(eth0)|100.0|6D:B9:46:BA:2D:B2|true
+#config
+hostname PC3
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+PC2
+GuiPC
+265,204
+true
+2
+cua0|1|null|100.00
+eth0|0|PC2(eth0) - Hub2(eth1)|100.0|1C:60:17:74:56:30|true
+#config
+hostname PC2
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata

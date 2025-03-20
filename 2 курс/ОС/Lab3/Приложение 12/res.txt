@@ -1,0 +1,9 @@
+   PPID     PID    PGID     SID TTY        TPGID STAT   UID   TIME COMMAND
+  52091   52170   52170   52091 pts/3      52170 S+       0   0:00 sudo ./father res.txt
+  52170   52171   52170   52091 pts/3      52170 S+       0   0:00  \_ ./father res.txt
+  52171   52172   52170   52091 pts/3      52170 S+       0   0:00      \_ son1
+  52171   52173   52170   52091 pts/3      52170 S+       0   0:00      \_ son2 res.txt
+  52171   52174   52170   52091 pts/3      52170 Z+       0   0:00      \_ [son3] <defunct>
+  52171   52175   52170   52091 pts/3      52170 S+       0   0:00      \_ sh -c ps xjf | grep "STAT\|52091" > res.txt
+  52175   52176   52170   52091 pts/3      52170 R+       0   0:00          \_ ps xjf
+  52175   52177   52170   52091 pts/3      52170 S+       0   0:00          \_ grep STAT\|52091

@@ -1,0 +1,17 @@
+input{
+    font-size: x-large;
+}
+
+body {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+    background-image: url("../background/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

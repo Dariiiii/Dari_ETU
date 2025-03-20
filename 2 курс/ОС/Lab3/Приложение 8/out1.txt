@@ -1,0 +1,603 @@
+Child 1: i = 0, pid = 37294, ppid = 37293
+Child 1: i = 1, pid = 37294, ppid = 37293
+Child 1: i = 2, pid = 37294, ppid = 37293
+Child 1: i = 3, pid = 37294, ppid = 37293
+Child 1: i = 4, pid = 37294, ppid = 37293
+Child 1: i = 5, pid = 37294, ppid = 37293
+Child 1: i = 6, pid = 37294, ppid = 37293
+Child 1: i = 7, pid = 37294, ppid = 37293
+Child 1: i = 8, pid = 37294, ppid = 37293
+Child 1: i = 9, pid = 37294, ppid = 37293
+Child 1: i = 10, pid = 37294, ppid = 37293
+Child 1: i = 11, pid = 37294, ppid = 37293
+Child 1: i = 12, pid = 37294, ppid = 37293
+Child 1: i = 13, pid = 37294, ppid = 37293
+Child 1: i = 14, pid = 37294, ppid = 37293
+Child 1: i = 15, pid = 37294, ppid = 37293
+Child 1: i = 16, pid = 37294, ppid = 37293
+Child 1: i = 17, pid = 37294, ppid = 37293
+Child 1: i = 18, pid = 37294, ppid = 37293
+Child 1: i = 19, pid = 37294, ppid = 37293
+Child 1: i = 20, pid = 37294, ppid = 37293
+Child 1: i = 21, pid = 37294, ppid = 37293
+Child 1: i = 22, pid = 37294, ppid = 37293
+Child 1: i = 23, pid = 37294, ppid = 37293
+Child 1: i = 24, pid = 37294, ppid = 37293
+Child 1: i = 25, pid = 37294, ppid = 37293
+Child 1: i = 26, pid = 37294, ppid = 37293
+Child 1: i = 27, pid = 37294, ppid = 37293
+Child 1: i = 28, pid = 37294, ppid = 37293
+Child 1: i = 29, pid = 37294, ppid = 37293
+Child 1: i = 30, pid = 37294, ppid = 37293
+Child 1: i = 31, pid = 37294, ppid = 37293
+Child 1: i = 32, pid = 37294, ppid = 37293
+Child 1: i = 33, pid = 37294, ppid = 37293
+Child 1: i = 34, pid = 37294, ppid = 37293
+Child 1: i = 35, pid = 37294, ppid = 37293
+Child 1: i = 36, pid = 37294, ppid = 37293
+Child 1: i = 37, pid = 37294, ppid = 37293
+Child 1: i = 38, pid = 37294, ppid = 37293
+Child 1: i = 39, pid = 37294, ppid = 37293
+Child 1: i = 40, pid = 37294, ppid = 37293
+Child 1: i = 41, pid = 37294, ppid = 37293
+Child 1: i = 42, pid = 37294, ppid = 37293
+Child 1: i = 43, pid = 37294, ppid = 37293
+Child 1: i = 44, pid = 37294, ppid = 37293
+Child 1: i = 45, pid = 37294, ppid = 37293
+Child 1: i = 46, pid = 37294, ppid = 37293
+Child 1: i = 47, pid = 37294, ppid = 37293
+Child 1: i = 48, pid = 37294, ppid = 37293
+Child 1: i = 49, pid = 37294, ppid = 37293
+Child 1: i = 50, pid = 37294, ppid = 37293
+Child 1: i = 51, pid = 37294, ppid = 37293
+Child 1: i = 52, pid = 37294, ppid = 37293
+Child 1: i = 53, pid = 37294, ppid = 37293
+Child 1: i = 54, pid = 37294, ppid = 37293
+Child 1: i = 55, pid = 37294, ppid = 37293
+Child 1: i = 56, pid = 37294, ppid = 37293
+Child 1: i = 57, pid = 37294, ppid = 37293
+Child 1: i = 58, pid = 37294, ppid = 37293
+Child 1: i = 59, pid = 37294, ppid = 37293
+Child 1: i = 60, pid = 37294, ppid = 37293
+Child 1: i = 61, pid = 37294, ppid = 37293
+Child 1: i = 62, pid = 37294, ppid = 37293
+Child 1: i = 63, pid = 37294, ppid = 37293
+Child 1: i = 64, pid = 37294, ppid = 37293
+Child 1: i = 65, pid = 37294, ppid = 37293
+Child 1: i = 66, pid = 37294, ppid = 37293
+Child 1: i = 67, pid = 37294, ppid = 37293
+Child 1: i = 68, pid = 37294, ppid = 37293
+Child 1: i = 69, pid = 37294, ppid = 37293
+Child 1: i = 70, pid = 37294, ppid = 37293
+Child 1: i = 71, pid = 37294, ppid = 37293
+Child 1: i = 72, pid = 37294, ppid = 37293
+Child 1: i = 73, pid = 37294, ppid = 37293
+Child 1: i = 74, pid = 37294, ppid = 37293
+Child 1: i = 75, pid = 37294, ppid = 37293
+Child 1: i = 76, pid = 37294, ppid = 37293
+Child 1: i = 77, pid = 37294, ppid = 37293
+Child 1: i = 78, pid = 37294, ppid = 37293
+Child 1: i = 79, pid = 37294, ppid = 37293
+Child 1: i = 80, pid = 37294, ppid = 37293
+Child 1: i = 81, pid = 37294, ppid = 37293
+Child 1: i = 82, pid = 37294, ppid = 37293
+Child 1: i = 83, pid = 37294, ppid = 37293
+Child 1: i = 84, pid = 37294, ppid = 37293
+Child 1: i = 85, pid = 37294, ppid = 37293
+Child 1: i = 86, pid = 37294, ppid = 37293
+Child 1: i = 87, pid = 37294, ppid = 37293
+Child 1: i = 88, pid = 37294, ppid = 37293
+Child 1: i = 89, pid = 37294, ppid = 37293
+Child 1: i = 90, pid = 37294, ppid = 37293
+Child 1: i = 91, pid = 37294, ppid = 37293
+Child 1: i = 92, pid = 37294, ppid = 37293
+Child 1: i = 93, pid = 37294, ppid = 37293
+Child 1: i = 94, pid = 37294, ppid = 37293
+Child 1: i = 95, pid Parent: i = 0, pid = 37293, ppid = 34467
+Parent: i = 1, pid = 37293, ppid = 34467
+Parent: i = 2, pid = 37293, ppid = 34467
+Parent: i = 3, pid = 37293, ppid = 34467
+Parent: i = 4, pid = 37293, ppid = 34467
+Parent: i = 5, pid = 37293, ppid = 34467
+Parent: i = 6, pid = 37293, ppid = 34467
+Parent: i = 7, pid = 37293, ppid = 34467
+Parent: i = 8, pid = 37293, ppid = 34467
+Parent: i = 9, pid = 37293, ppid = 34467
+Parent: i = 10, pid = 37293, ppid = 34467
+Parent: i = 11, pid = 37293, ppid = 34467
+Parent: i = 12, pid = 37293, ppid = 34467
+Parent: i = 13, pid = 37293, ppid = 34467
+Parent: i = 14, pid = 37293, ppid = 34467
+Parent: i = 15, pid = 37293, ppid = 34467
+Parent: i = 16, pid = 37293, ppid = 34467
+Parent: i = 17, pid = 37293, ppid = 34467
+Parent: i = 18, pid = 37293, ppid = 34467
+Parent: i = 19, pid = 37293, ppid = 34467
+Parent: i = 20, pid = 37293, ppid = 34467
+Parent: i = 21, pid = 37293, ppid = 34467
+Parent: i = 22, pid = 37293, ppid = 34467
+Parent: i = 23, pid = 37293, ppid = 34467
+Parent: i = 24, pid = 37293, ppid = 34467
+Parent: i = 25, pid = 37293, ppid = 34467
+Parent: i = 26, pid = 37293, ppid = 34467
+Parent: i = 27, pid = 37293, ppid = 34467
+Parent: i = 28, pid = 37293, ppid = 34467
+Parent: i = 29, pid = 37293, ppid = 34467
+Parent: i = 30, pid = 37293, ppid = 34467
+Parent: i = 31, pid = 37293, ppid = 34467
+Parent: i = 32, pid = 37293, ppid = 34467
+Parent: i = 33, pid = 37293, ppid = 34467
+Parent: i = 34, pid = 37293, ppid = 34467
+Parent: i = 35, pid = 37293, ppid = 34467
+Parent: i = 36, pid = 37293, ppid = 34467
+Parent: i = 37, pid = 37293, ppid = 34467
+Parent: i = 38, pid = 37293, ppid = 34467
+Parent: i = 39, pid = 37293, ppid = 34467
+Parent: i = 40, pid = 37293, ppid = 34467
+Parent: i = 41, pid = 37293, ppid = 34467
+Parent: i = 42, pid = 37293, ppid = 34467
+Parent: i = 43, pid = 37293, ppid = 34467
+Parent: i = 44, pid = 37293, ppid = 34467
+Parent: i = 45, pid = 37293, ppid = 34467
+Parent: i = 46, pid = 37293, ppid = 34467
+Parent: i = 47, pid = 37293, ppid = 34467
+Parent: i = 48, pid = 37293, ppid = 34467
+Parent: i = 49, pid = 37293, ppid = 34467
+Parent: i = 50, pid = 37293, ppid = 34467
+Parent: i = 51, pid = 37293, ppid = 34467
+Parent: i = 52, pid = 37293, ppid = 34467
+Parent: i = 53, pid = 37293, ppid = 34467
+Parent: i = 54, pid = 37293, ppid = 34467
+Parent: i = 55, pid = 37293, ppid = 34467
+Parent: i = 56, pid = 37293, ppid = 34467
+Parent: i = 57, pid = 37293, ppid = 34467
+Parent: i = 58, pid = 37293, ppid = 34467
+Parent: i = 59, pid = 37293, ppid = 34467
+Parent: i = 60, pid = 37293, ppid = 34467
+Parent: i = 61, pid = 37293, ppid = 34467
+Parent: i = 62, pid = 37293, ppid = 34467
+Parent: i = 63, pid = 37293, ppid = 34467
+Parent: i = 64, pid = 37293, ppid = 34467
+Parent: i = 65, pid = 37293, ppid = 34467
+Parent: i = 66, pid = 37293, ppid = 34467
+Parent: i = 67, pid = 37293, ppid = 34467
+Parent: i = 68, pid = 37293, ppid = 34467
+Parent: i = 69, pid = 37293, ppid = 34467
+Parent: i = 70, pid = 37293, ppid = 34467
+Parent: i = 71, pid = 37293, ppid = 34467
+Parent: i = 72, pid = 37293, ppid = 34467
+Parent: i = 73, pid = 37293, ppid = 34467
+Parent: i = 74, pid = 37293, ppid = 34467
+Parent: i = 75, pid = 37293, ppid = 34467
+Parent: i = 76, pid = 37293, ppid = 34467
+Parent: i = 77, pid = 37293, ppid = 34467
+Parent: i = 78, pid = 37293, ppid = 34467
+Parent: i = 79, pid = 37293, ppid = 34467
+Parent: i = 80, pid = 37293, ppid = 34467
+Parent: i = 81, pid = 37293, ppid = 34467
+Parent: i = 82, pid = 37293, ppid = 34467
+Parent: i = 83, pid = 37293, ppid = 34467
+Parent: i = 84, pid = 37293, ppid = 34467
+Parent: i = 85, pid = 37293, ppid = 34467
+Parent: i = 86, pid = 37293, ppid = 34467
+Parent: i = 87, pid = 37293, ppid = 34467
+Parent: i = 88, pid = 37293, ppid = 34467
+Parent: i = 89, pid = 37293, ppid = 34467
+Parent: i = 90, pid = 37293, ppid = 34467
+Parent: i = 91, pid = 37293, ppid = 34467
+Parent: i = 92, pid = 37293, ppid = 34467
+Parent: i = 93, pid = 37293, ppid = 34467
+Parent: i = 94, pid = 37293, ppid = 34467
+Parent: i = 95, pid = 37293, ppid = 34467
+Parent: i = 96, pid = 37293, ppid = 34467
+Parent: i = 97, pid = 37293, ppi= 37294, ppid = 37293
+Child 1: i = 96, pid = 37294, ppid = 37293
+Child 1: i = 97, pid = 37294, ppid = 37293
+Child 1: i = 98, pid = 37294, ppid = 37293
+Child 1: i = 99, pid = 37294, ppid = 37293
+Child 1: i = 100, pid = 37294, ppid = 37293
+Child 1: i = 101, pid = 37294, ppid = 37293
+Child 1: i = 102, pid = 37294, ppid = 37293
+Child 1: i = 103, pid = 37294, ppid = 37293
+Child 1: i = 104, pid = 37294, ppid = 37293
+Child 1: i = 105, pid = 37294, ppid = 37293
+Child 1: i = 106, pid = 37294, ppid = 37293
+Child 1: i = 107, pid = 37294, ppid = 37293
+Child 1: i = 108, pid = 37294, ppid = 37293
+Child 1: i = 109, pid = 37294, ppid = 37293
+Child 1: i = 110, pid = 37294, ppid = 37293
+Child 1: i = 111, pid = 37294, ppid = 37293
+Child 1: i = 112, pid = 37294, ppid = 37293
+Child 1: i = 113, pid = 37294, ppid = 37293
+Child 1: i = 114, pid = 37294, ppid = 37293
+Child 1: i = 115, pid = 37294, ppid = 37293
+Child 1: i = 116, pid = 37294, ppid = 37293
+Child 1: i = 117, pid = 37294, ppid = 37293
+Child 1: i = 118, pid = 37294, ppid = 37293
+Child 1: i = 119, pid = 37294, ppid = 37293
+Child 1: i = 120, pid = 37294, ppid = 37293
+Child 1: i = 121, pid = 37294, ppid = 37293
+Child 1: i = 122, pid = 37294, ppid = 37293
+Child 1: i = 123, pid = 37294, ppid = 37293
+Child 1: i = 124, pid = 37294, ppid = 37293
+Child 1: i = 125, pid = 37294, ppid = 37293
+Child 1: i = 126, pid = 37294, ppid = 37293
+Child 1: i = 127, pid = 37294, ppid = 37293
+Child 1: i = 128, pid = 37294, ppid = 37293
+Child 1: i = 129, pid = 37294, ppid = 37293
+Child 1: i = 130, pid = 37294, ppid = 37293
+Child 1: i = 131, pid = 37294, ppid = 37293
+Child 1: i = 132, pid = 37294, ppid = 37293
+Child 1: i = 133, pid = 37294, ppid = 37293
+Child 1: i = 134, pid = 37294, ppid = 37293
+Child 1: i = 135, pid = 37294, ppid = 37293
+Child 1: i = 136, pid = 37294, ppid = 37293
+Child 1: i = 137, pid = 37294, ppid = 37293
+Child 1: i = 138, pid = 37294, ppid = 37293
+Child 1: i = 139, pid = 37294, ppid = 37293
+Child 1: i = 140, pid = 37294, ppid = 37293
+Child 1: i = 141, pid = 37294, ppid = 37293
+Child 1: i = 142, pid = 37294, ppid = 37293
+Child 1: i = 143, pid = 37294, ppid = 37293
+Child 1: i = 144, pid = 37294, ppid = 37293
+Child 1: i = 145, pid = 37294, ppid = 37293
+Child 1: i = 146, pid = 37294, ppid = 37293
+Child 1: i = 147, pid = 37294, ppid = 37293
+Child 1: i = 148, pid = 37294, ppid = 37293
+Child 1: i = 149, pid = 37294, ppid = 37293
+Child 1: i = 150, pid = 37294, ppid = 37293
+Child 1: i = 151, pid = 37294, ppid = 37293
+Child 1: i = 152, pid = 37294, ppid = 37293
+Child 1: i = 153, pid = 37294, ppid = 37293
+Child 1: i = 154, pid = 37294, ppid = 37293
+Child 1: i = 155, pid = 37294, ppid = 37293
+Child 1: i = 156, pid = 37294, ppid = 37293
+Child 1: i = 157, pid = 37294, ppid = 37293
+Child 1: i = 158, pid = 37294, ppid = 37293
+Child 1: i = 159, pid = 37294, ppid = 37293
+Child 1: i = 160, pid = 37294, ppid = 37293
+Child 1: i = 161, pid = 37294, ppid = 37293
+Child 1: i = 162, pid = 37294, ppid = 37293
+Child 1: i = 163, pid = 37294, ppid = 37293
+Child 1: i = 164, pid = 37294, ppid = 37293
+Child 1: i = 165, pid = 37294, ppid = 37293
+Child 1: i = 166, pid = 37294, ppid = 37293
+Child 1: i = 167, pid = 37294, ppid = 37293
+Child 1: i = 168, pid = 37294, ppid = 37293
+Child 1: i = 169, pid = 37294, ppid = 37293
+Child 1: i = 170, pid = 37294, ppid = 37293
+Child 1: i = 171, pid = 37294, ppid = 37293
+Child 1: i = 172, pid = 37294, ppid = 37293
+Child 1: i = 173, pid = 37294, ppid = 37293
+Child 1: i = 174, pid = 37294, ppid = 37293
+Child 1: i = 175, pid = 37294, ppid = 37293
+Child 1: i = 176, pid = 37294, ppid = 37293
+Child 1: i = 177, pid = 37294, ppid = 37293
+Child 1: i = 178, pid = 37294, ppid = 37293
+Child 1: i = 179, pid = 37294, ppid = 37293
+Child 1: i = 180, pid = 37294, ppid = 37293
+Child 1: i = 181, pid = 37294, ppid = 37293
+Child 1: i = 182, pid = 37294, ppid = 37293
+Child 1: i = 183, pid = 37294, ppid = 37293
+Child 1: i = 184, pid = 37294, ppid = 37293
+Child 1: i = 185, pid = 37294, ppid = 37293
+Child 1: i = 186, pid = 37294, ppid = 37293
+Child 1: i = 187, pid = 37294, ppid = 37293
+Child 1: i = 188, pid = 37294,Child 2: i = 0, pid = 37295, ppid = 37293
+Child 2: i = 1, pid = 37295, ppid = 37293
+Child 2: i = 2, pid = 37295, ppid = 37293
+Child 2: i = 3, pid = 37295, ppid = 37293
+Child 2: i = 4, pid = 37295, ppid = 37293
+Child 2: i = 5, pid = 37295, ppid = 37293
+Child 2: i = 6, pid = 37295, ppid = 37293
+Child 2: i = 7, pid = 37295, ppid = 37293
+Child 2: i = 8, pid = 37295, ppid = 37293
+Child 2: i = 9, pid = 37295, ppid = 37293
+Child 2: i = 10, pid = 37295, ppid = 37293
+Child 2: i = 11, pid = 37295, ppid = 37293
+Child 2: i = 12, pid = 37295, ppid = 37293
+Child 2: i = 13, pid = 37295, ppid = 37293
+Child 2: i = 14, pid = 37295, ppid = 37293
+Child 2: i = 15, pid = 37295, ppid = 37293
+Child 2: i = 16, pid = 37295, ppid = 37293
+Child 2: i = 17, pid = 37295, ppid = 37293
+Child 2: i = 18, pid = 37295, ppid = 37293
+Child 2: i = 19, pid = 37295, ppid = 37293
+Child 2: i = 20, pid = 37295, ppid = 37293
+Child 2: i = 21, pid = 37295, ppid = 37293
+Child 2: i = 22, pid = 37295, ppid = 37293
+Child 2: i = 23, pid = 37295, ppid = 37293
+Child 2: i = 24, pid = 37295, ppid = 37293
+Child 2: i = 25, pid = 37295, ppid = 37293
+Child 2: i = 26, pid = 37295, ppid = 37293
+Child 2: i = 27, pid = 37295, ppid = 37293
+Child 2: i = 28, pid = 37295, ppid = 37293
+Child 2: i = 29, pid = 37295, ppid = 37293
+Child 2: i = 30, pid = 37295, ppid = 37293
+Child 2: i = 31, pid = 37295, ppid = 37293
+Child 2: i = 32, pid = 37295, ppid = 37293
+Child 2: i = 33, pid = 37295, ppid = 37293
+Child 2: i = 34, pid = 37295, ppid = 37293
+Child 2: i = 35, pid = 37295, ppid = 37293
+Child 2: i = 36, pid = 37295, ppid = 37293
+Child 2: i = 37, pid = 37295, ppid = 37293
+Child 2: i = 38, pid = 37295, ppid = 37293
+Child 2: i = 39, pid = 37295, ppid = 37293
+Child 2: i = 40, pid = 37295, ppid = 37293
+Child 2: i = 41, pid = 37295, ppid = 37293
+Child 2: i = 42, pid = 37295, ppid = 37293
+Child 2: i = 43, pid = 37295, ppid = 37293
+Child 2: i = 44, pid = 37295, ppid = 37293
+Child 2: i = 45, pid = 37295, ppid = 37293
+Child 2: i = 46, pid = 37295, ppid = 37293
+Child 2: i = 47, pid = 37295, ppid = 37293
+Child 2: i = 48, pid = 37295, ppid = 37293
+Child 2: i = 49, pid = 37295, ppid = 37293
+Child 2: i = 50, pid = 37295, ppid = 37293
+Child 2: i = 51, pid = 37295, ppid = 37293
+Child 2: i = 52, pid = 37295, ppid = 37293
+Child 2: i = 53, pid = 37295, ppid = 37293
+Child 2: i = 54, pid = 37295, ppid = 37293
+Child 2: i = 55, pid = 37295, ppid = 37293
+Child 2: i = 56, pid = 37295, ppid = 37293
+Child 2: i = 57, pid = 37295, ppid = 37293
+Child 2: i = 58, pid = 37295, ppid = 37293
+Child 2: i = 59, pid = 37295, ppid = 37293
+Child 2: i = 60, pid = 37295, ppid = 37293
+Child 2: i = 61, pid = 37295, ppid = 37293
+Child 2: i = 62, pid = 37295, ppid = 37293
+Child 2: i = 63, pid = 37295, ppid = 37293
+Child 2: i = 64, pid = 37295, ppid = 37293
+Child 2: i = 65, pid = 37295, ppid = 37293
+Child 2: i = 66, pid = 37295, ppid = 37293
+Child 2: i = 67, pid = 37295, ppid = 37293
+Child 2: i = 68, pid = 37295, ppid = 37293
+Child 2: i = 69, pid = 37295, ppid = 37293
+Child 2: i = 70, pid = 37295, ppid = 37293
+Child 2: i = 71, pid = 37295, ppid = 37293
+Child 2: i = 72, pid = 37295, ppid = 37293
+Child 2: i = 73, pid = 37295, ppid = 37293
+Child 2: i = 74, pid = 37295, ppid = 37293
+Child 2: i = 75, pid = 37295, ppid = 37293
+Child 2: i = 76, pid = 37295, ppid = 37293
+Child 2: i = 77, pid = 37295, ppid = 37293
+Child 2: i = 78, pid = 37295, ppid = 37293
+Child 2: i = 79, pid = 37295, ppid = 37293
+Child 2: i = 80, pid = 37295, ppid = 37293
+Child 2: i = 81, pid = 37295, ppid = 37293
+Child 2: i = 82, pid = 37295, ppid = 37293
+Child 2: i = 83, pid = 37295, ppid = 37293
+Child 2: i = 84, pid = 37295, ppid = 37293
+Child 2: i = 85, pid = 37295, ppid = 37293
+Child 2: i = 86, pid = 37295, ppid = 37293
+Child 2: i = 87, pid = 37295, ppid = 37293
+Child 2: i = 88, pid = 37295, ppid = 37293
+Child 2: i = 89, pid = 37295, ppid = 37293
+Child 2: i = 90, pid = 37295, ppid = 37293
+Child 2: i = 91, pid = 37295, ppid = 37293
+Child 2: i = 92, pid = 37295, ppid = 37293
+Child 2: i = 93, pid = 37295, ppid = 37293
+Child 2: i = 94, pid = 37295, ppid = 37293
+Child 2: i = 95, pid d = 34467
+Parent: i = 98, pid = 37293, ppid = 34467
+Parent: i = 99, pid = 37293, ppid = 34467
+Parent: i = 100, pid = 37293, ppid = 34467
+Parent: i = 101, pid = 37293, ppid = 34467
+Parent: i = 102, pid = 37293, ppid = 34467
+Parent: i = 103, pid = 37293, ppid = 34467
+Parent: i = 104, pid = 37293, ppid = 34467
+Parent: i = 105, pid = 37293, ppid = 34467
+Parent: i = 106, pid = 37293, ppid = 34467
+Parent: i = 107, pid = 37293, ppid = 34467
+Parent: i = 108, pid = 37293, ppid = 34467
+Parent: i = 109, pid = 37293, ppid = 34467
+Parent: i = 110, pid = 37293, ppid = 34467
+Parent: i = 111, pid = 37293, ppid = 34467
+Parent: i = 112, pid = 37293, ppid = 34467
+Parent: i = 113, pid = 37293, ppid = 34467
+Parent: i = 114, pid = 37293, ppid = 34467
+Parent: i = 115, pid = 37293, ppid = 34467
+Parent: i = 116, pid = 37293, ppid = 34467
+Parent: i = 117, pid = 37293, ppid = 34467
+Parent: i = 118, pid = 37293, ppid = 34467
+Parent: i = 119, pid = 37293, ppid = 34467
+Parent: i = 120, pid = 37293, ppid = 34467
+Parent: i = 121, pid = 37293, ppid = 34467
+Parent: i = 122, pid = 37293, ppid = 34467
+Parent: i = 123, pid = 37293, ppid = 34467
+Parent: i = 124, pid = 37293, ppid = 34467
+Parent: i = 125, pid = 37293, ppid = 34467
+Parent: i = 126, pid = 37293, ppid = 34467
+Parent: i = 127, pid = 37293, ppid = 34467
+Parent: i = 128, pid = 37293, ppid = 34467
+Parent: i = 129, pid = 37293, ppid = 34467
+Parent: i = 130, pid = 37293, ppid = 34467
+Parent: i = 131, pid = 37293, ppid = 34467
+Parent: i = 132, pid = 37293, ppid = 34467
+Parent: i = 133, pid = 37293, ppid = 34467
+Parent: i = 134, pid = 37293, ppid = 34467
+Parent: i = 135, pid = 37293, ppid = 34467
+Parent: i = 136, pid = 37293, ppid = 34467
+Parent: i = 137, pid = 37293, ppid = 34467
+Parent: i = 138, pid = 37293, ppid = 34467
+Parent: i = 139, pid = 37293, ppid = 34467
+Parent: i = 140, pid = 37293, ppid = 34467
+Parent: i = 141, pid = 37293, ppid = 34467
+Parent: i = 142, pid = 37293, ppid = 34467
+Parent: i = 143, pid = 37293, ppid = 34467
+Parent: i = 144, pid = 37293, ppid = 34467
+Parent: i = 145, pid = 37293, ppid = 34467
+Parent: i = 146, pid = 37293, ppid = 34467
+Parent: i = 147, pid = 37293, ppid = 34467
+Parent: i = 148, pid = 37293, ppid = 34467
+Parent: i = 149, pid = 37293, ppid = 34467
+Parent: i = 150, pid = 37293, ppid = 34467
+Parent: i = 151, pid = 37293, ppid = 34467
+Parent: i = 152, pid = 37293, ppid = 34467
+Parent: i = 153, pid = 37293, ppid = 34467
+Parent: i = 154, pid = 37293, ppid = 34467
+Parent: i = 155, pid = 37293, ppid = 34467
+Parent: i = 156, pid = 37293, ppid = 34467
+Parent: i = 157, pid = 37293, ppid = 34467
+Parent: i = 158, pid = 37293, ppid = 34467
+Parent: i = 159, pid = 37293, ppid = 34467
+Parent: i = 160, pid = 37293, ppid = 34467
+Parent: i = 161, pid = 37293, ppid = 34467
+Parent: i = 162, pid = 37293, ppid = 34467
+Parent: i = 163, pid = 37293, ppid = 34467
+Parent: i = 164, pid = 37293, ppid = 34467
+Parent: i = 165, pid = 37293, ppid = 34467
+Parent: i = 166, pid = 37293, ppid = 34467
+Parent: i = 167, pid = 37293, ppid = 34467
+Parent: i = 168, pid = 37293, ppid = 34467
+Parent: i = 169, pid = 37293, ppid = 34467
+Parent: i = 170, pid = 37293, ppid = 34467
+Parent: i = 171, pid = 37293, ppid = 34467
+Parent: i = 172, pid = 37293, ppid = 34467
+Parent: i = 173, pid = 37293, ppid = 34467
+Parent: i = 174, pid = 37293, ppid = 34467
+Parent: i = 175, pid = 37293, ppid = 34467
+Parent: i = 176, pid = 37293, ppid = 34467
+Parent: i = 177, pid = 37293, ppid = 34467
+Parent: i = 178, pid = 37293, ppid = 34467
+Parent: i = 179, pid = 37293, ppid = 34467
+Parent: i = 180, pid = 37293, ppid = 34467
+Parent: i = 181, pid = 37293, ppid = 34467
+Parent: i = 182, pid = 37293, ppid = 34467
+Parent: i = 183, pid = 37293, ppid = 34467
+Parent: i = 184, pid = 37293, ppid = 34467
+Parent: i = 185, pid = 37293, ppid = 34467
+Parent: i = 186, pid = 37293, ppid = 34467
+Parent: i = 187, pid = 37293, ppid = 34467
+Parent: i = 188, pid = 37293, ppid = 34467
+Parent: i = 189, pid = 37293, ppid = 34467
+Parent: i = 190, pid = 37293, ppid = 34467
+Parent: i = 191, pid = 37293, ppid = 34467
+Parent: i = 192, pid = 37293, ppid = 34467
+Par ppid = 37293
+Child 1: i = 189, pid = 37294, ppid = 37293
+Child 1: i = 190, pid = 37294, ppid = 37293
+Child 1: i = 191, pid = 37294, ppid = 37293
+Child 1: i = 192, pid = 37294, ppid = 37293
+Child 1: i = 193, pid = 37294, ppid = 37293
+Child 1: i = 194, pid = 37294, ppid = 37293
+Child 1: i = 195, pid = 37294, ppid = 37293
+Child 1: i = 196, pid = 37294, ppid = 37293
+Child 1: i = 197, pid = 37294, ppid = 37293
+Child 1: i = 198, pid = 37294, ppid = 37293
+Child 1: i = 199, pid = 37294, ppid = 37293
+Завершение процесса 1
+= 37295, ppid = 37293
+Child 2: i = 96, pid = 37295, ppid = 37293
+Child 2: i = 97, pid = 37295, ppid = 37293
+Child 2: i = 98, pid = 37295, ppid = 37293
+Child 2: i = 99, pid = 37295, ppid = 37293
+Child 2: i = 100, pid = 37295, ppid = 37293
+Child 2: i = 101, pid = 37295, ppid = 37293
+Child 2: i = 102, pid = 37295, ppid = 37293
+Child 2: i = 103, pid = 37295, ppid = 37293
+Child 2: i = 104, pid = 37295, ppid = 37293
+Child 2: i = 105, pid = 37295, ppid = 37293
+Child 2: i = 106, pid = 37295, ppid = 37293
+Child 2: i = 107, pid = 37295, ppid = 37293
+Child 2: i = 108, pid = 37295, ppid = 37293
+Child 2: i = 109, pid = 37295, ppid = 37293
+Child 2: i = 110, pid = 37295, ppid = 37293
+Child 2: i = 111, pid = 37295, ppid = 37293
+Child 2: i = 112, pid = 37295, ppid = 37293
+Child 2: i = 113, pid = 37295, ppid = 37293
+Child 2: i = 114, pid = 37295, ppid = 37293
+Child 2: i = 115, pid = 37295, ppid = 37293
+Child 2: i = 116, pid = 37295, ppid = 37293
+Child 2: i = 117, pid = 37295, ppid = 37293
+Child 2: i = 118, pid = 37295, ppid = 37293
+Child 2: i = 119, pid = 37295, ppid = 37293
+Child 2: i = 120, pid = 37295, ppid = 37293
+Child 2: i = 121, pid = 37295, ppid = 37293
+Child 2: i = 122, pid = 37295, ppid = 37293
+Child 2: i = 123, pid = 37295, ppid = 37293
+Child 2: i = 124, pid = 37295, ppid = 37293
+Child 2: i = 125, pid = 37295, ppid = 37293
+Child 2: i = 126, pid = 37295, ppid = 37293
+Child 2: i = 127, pid = 37295, ppid = 37293
+Child 2: i = 128, pid = 37295, ppid = 37293
+Child 2: i = 129, pid = 37295, ppid = 37293
+Child 2: i = 130, pid = 37295, ppid = 37293
+Child 2: i = 131, pid = 37295, ppid = 37293
+Child 2: i = 132, pid = 37295, ppid = 37293
+Child 2: i = 133, pid = 37295, ppid = 37293
+Child 2: i = 134, pid = 37295, ppid = 37293
+Child 2: i = 135, pid = 37295, ppid = 37293
+Child 2: i = 136, pid = 37295, ppid = 37293
+Child 2: i = 137, pid = 37295, ppid = 37293
+Child 2: i = 138, pid = 37295, ppid = 37293
+Child 2: i = 139, pid = 37295, ppid = 37293
+Child 2: i = 140, pid = 37295, ppid = 37293
+Child 2: i = 141, pid = 37295, ppid = 37293
+Child 2: i = 142, pid = 37295, ppid = 37293
+Child 2: i = 143, pid = 37295, ppid = 37293
+Child 2: i = 144, pid = 37295, ppid = 37293
+Child 2: i = 145, pid = 37295, ppid = 37293
+Child 2: i = 146, pid = 37295, ppid = 37293
+Child 2: i = 147, pid = 37295, ppid = 37293
+Child 2: i = 148, pid = 37295, ppid = 37293
+Child 2: i = 149, pid = 37295, ppid = 37293
+Child 2: i = 150, pid = 37295, ppid = 37293
+Child 2: i = 151, pid = 37295, ppid = 37293
+Child 2: i = 152, pid = 37295, ppid = 37293
+Child 2: i = 153, pid = 37295, ppid = 37293
+Child 2: i = 154, pid = 37295, ppid = 37293
+Child 2: i = 155, pid = 37295, ppid = 37293
+Child 2: i = 156, pid = 37295, ppid = 37293
+Child 2: i = 157, pid = 37295, ppid = 37293
+Child 2: i = 158, pid = 37295, ppid = 37293
+Child 2: i = 159, pid = 37295, ppid = 37293
+Child 2: i = 160, pid = 37295, ppid = 37293
+Child 2: i = 161, pid = 37295, ppid = 37293
+Child 2: i = 162, pid = 37295, ppid = 37293
+Child 2: i = 163, pid = 37295, ppid = 37293
+Child 2: i = 164, pid = 37295, ppid = 37293
+Child 2: i = 165, pid = 37295, ppid = 37293
+Child 2: i = 166, pid = 37295, ppid = 37293
+Child 2: i = 167, pid = 37295, ppid = 37293
+Child 2: i = 168, pid = 37295, ppid = 37293
+Child 2: i = 169, pid = 37295, ppid = 37293
+Child 2: i = 170, pid = 37295, ppid = 37293
+Child 2: i = 171, pid = 37295, ppid = 37293
+Child 2: i = 172, pid = 37295, ppid = 37293
+Child 2: i = 173, pid = 37295, ppid = 37293
+Child 2: i = 174, pid = 37295, ppid = 37293
+Child 2: i = 175, pid = 37295, ppid = 37293
+Child 2: i = 176, pid = 37295, ppid = 37293
+Child 2: i = 177, pid = 37295, ppid = 37293
+Child 2: i = 178, pid = 37295, ppid = 37293
+Child 2: i = 179, pid = 37295, ppid = 37293
+Child 2: i = 180, pid = 37295, ppid = 37293
+Child 2: i = 181, pid = 37295, ppid = 37293
+Child 2: i = 182, pid = 37295, ppid = 37293
+Child 2: i = 183, pid = 37295, ppid = 37293
+Child 2: i = 184, pid = 37295, ppid = 37293
+Child 2: i = 185, pid = 37295, ppid = 37293
+Child 2: i = 186, pid = 37295, ppid = 37293
+Child 2: i = 187, pid = 37295, ppid = 37293
+Child 2: i = 188, pid = 37295, ppid = 37293
+Child 2: i = 189, pid = 37295, ppid = 37293
+Child 2: i = 190, pid = 37295, ppid = 37293
+Child 2: i = 191, pid = 37295, ppid = 37293
+Child 2: i = 192, pid = 37295, ppid = 37293
+Child 2: i = 193, pid = 37295, ppid = 37293
+Child 2: i = 194, pid = 37295, ppid = 37293
+Child 2: i = 195, pid = 37295, ppid = 37293
+Child 2: i = 196, pid = 37295, ppid = 37293
+Child 2: i = 197, pid = 37295, ppid = 37293
+Child 2: i = 198, pid = 37295, ppid = 37293
+Child 2: i = 199, pid = 37295, ppid = 37293
+Завершение процесса 2
+ent: i = 193, pid = 37293, ppid = 34467
+Parent: i = 194, pid = 37293, ppid = 34467
+Parent: i = 195, pid = 37293, ppid = 34467
+Parent: i = 196, pid = 37293, ppid = 34467
+Parent: i = 197, pid = 37293, ppid = 34467
+Parent: i = 198, pid = 37293, ppid = 34467
+Parent: i = 199, pid = 37293, ppid = 34467
+Завершение процесса

@@ -1,0 +1,30 @@
+%
+% As used by Kilpatrick, D. & Cameron-Jones, M. (1998). Numeric prediction
+% using instance-based learning with encoding length selection. In Progress
+% in Connectionist-Based Information Systems. Singapore: Springer-Verlag.
+%
+@relation 'cpu'
+@attribute MYCT real
+@attribute MMIN real
+@attribute MIN real
+@data
+1,2,1
+2,2,1
+10,10,10
+12,12,13
+21,23,32
+1,5,6
+1,2,1
+45,67,43
+12,23,34
+34,45,56
+56,67,78
+78,89,90
+15,98,40
+99,88,77
+3,4,5
+5,6,7
+8,9,0
+21,32,45
+14,6,88
+

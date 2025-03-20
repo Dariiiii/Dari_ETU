@@ -1,0 +1,152 @@
+F S     PID    PPID CLS PRI  NI STAT CMD                         RTPRIO
+4 S   97213   95417  TS  19   0 S+   sudo ./father                    -
+4 S   97214   97213  RR  41   - SL+   \_ ./father                     1
+4 S   97215   97214  RR  90   - SL+       \_ son                     50
+4 S   97216   97214  RR  90   - SL+       \_ son                     50
+0 S   97217   97214  RR  41   - S+        \_ sh -c ps -o f,s,pid      1
+4 R   97218   97217  RR  41   - R+            \_ ps -o f,s,pid,p      1
+4 S    1044    1030  TS  19   0 Ss   fusermount3 -o rw,nosuid,no      -
+1 S       2       0  TS  19   0 S    [kthreadd]                       -
+1 I       3       2  TS  39 -20 I<    \_ [rcu_gp]                     -
+1 I       4       2  TS  39 -20 I<    \_ [rcu_par_gp]                 -
+1 I       5       2  TS  39 -20 I<    \_ [slub_flushwq]               -
+1 I       6       2  TS  39 -20 I<    \_ [netns]                      -
+1 I       8       2  TS  39 -20 I<    \_ [kworker/0:0H-events_hi      -
+1 I      10       2  TS  39 -20 I<    \_ [mm_percpu_wq]               -
+1 I      12       2  TS  19   0 I     \_ [rcu_tasks_kthread]          -
+1 I      13       2  TS  19   0 I     \_ [rcu_tasks_rude_kthread      -
+1 I      14       2  TS  19   0 I     \_ [rcu_tasks_trace_kthrea      -
+1 S      15       2  TS  19   0 S     \_ [ksoftirqd/0]                -
+1 I      16       2  FF  41   - I     \_ [rcu_preempt]                1
+1 S      17       2  FF  41   - S     \_ [rcub/0]                     1
+1 S      18       2  FF 139   - S     \_ [migration/0]               99
+1 S      19       2  FF  90   - S     \_ [idle_inject/0]             50
+1 S      21       2  TS  19   0 S     \_ [cpuhp/0]                    -
+5 S      22       2  TS  19   0 S     \_ [cpuhp/1]                    -
+1 S      23       2  FF  90   - S     \_ [idle_inject/1]             50
+1 S      24       2  FF 139   - S     \_ [migration/1]               99
+1 S      25       2  TS  19   0 S     \_ [ksoftirqd/1]                -
+1 I      27       2  TS  39 -20 I<    \_ [kworker/1:0H-events_hi      -
+5 S      28       2  TS  19   0 S     \_ [cpuhp/2]                    -
+1 S      29       2  FF  90   - S     \_ [idle_inject/2]             50
+1 S      30       2  FF 139   - S     \_ [migration/2]               99
+1 S      31       2  TS  19   0 S     \_ [ksoftirqd/2]                -
+1 I      33       2  TS  39 -20 I<    \_ [kworker/2:0H-events_hi      -
+5 S      34       2  TS  19   0 S     \_ [cpuhp/3]                    -
+1 S      35       2  FF  90   - S     \_ [idle_inject/3]             50
+1 S      36       2  FF 139   - S     \_ [migration/3]               99
+1 S      37       2  TS  19   0 S     \_ [ksoftirqd/3]                -
+1 I      39       2  TS  39 -20 I<    \_ [kworker/3:0H-events_hi      -
+5 S      40       2  TS  19   0 S     \_ [kdevtmpfs]                  -
+1 I      41       2  TS  39 -20 I<    \_ [inet_frag_wq]               -
+1 S      42       2  TS  19   0 S     \_ [kauditd]                    -
+1 S      43       2  TS  19   0 S     \_ [khungtaskd]                 -
+1 S      45       2  TS  19   0 S     \_ [oom_reaper]                 -
+1 I      46       2  TS  39 -20 I<    \_ [writeback]                  -
+1 S      47       2  TS  19   0 S     \_ [kcompactd0]                 -
+1 S      48       2  TS  14   5 SN    \_ [ksmd]                       -
+1 S      50       2  TS   0  19 SN    \_ [khugepaged]                 -
+1 I      51       2  TS  39 -20 I<    \_ [kintegrityd]                -
+1 I      52       2  TS  39 -20 I<    \_ [kblockd]                    -
+1 I      53       2  TS  39 -20 I<    \_ [blkcg_punt_bio]             -
+1 I      54       2  TS  39 -20 I<    \_ [tpm_dev_wq]                 -
+1 I      55       2  TS  39 -20 I<    \_ [ata_sff]                    -
+1 I      56       2  TS  39 -20 I<    \_ [edac-poller]                -
+1 I      57       2  TS  39 -20 I<    \_ [devfreq_wq]                 -
+1 S      59       2  FF  90   - S     \_ [watchdogd]                 50
+1 I      61       2  TS  39 -20 I<    \_ [kworker/1:1H-events_hi      -
+1 S      62       2  TS  19   0 S     \_ [kswapd0]                    -
+1 I      63       2  TS  39 -20 I<    \_ [kthrotld]                   -
+1 S      64       2  FF  90   - S     \_ [irq/122-aerdrv]            50
+1 S      65       2  FF  90   - S     \_ [irq/122-pcie-dpc]          50
+1 S      66       2  FF  90   - S     \_ [irq/123-aerdrv]            50
+1 S      67       2  FF  90   - S     \_ [irq/123-pcie-dpc]          50
+1 S      68       2  FF  90   - S     \_ [irq/124-aerdrv]            50
+1 S      70       2  FF  90   - S     \_ [irq/124-pcie-dpc]          50
+1 I      71       2  TS  39 -20 I<    \_ [acpi_thermal_pm]            -
+1 S      72       2  TS  19   0 S     \_ [xenbus_probe]               -
+1 S      73       2  TS  19   0 S     \_ [hwrng]                      -
+1 S      74       2  TS  19   0 S     \_ [scsi_eh_0]                  -
+1 I      75       2  TS  39 -20 I<    \_ [scsi_tmf_0]                 -
+1 I      76       2  TS  39 -20 I<    \_ [mld]                        -
+1 I      77       2  TS  39 -20 I<    \_ [kworker/2:1H-events_hi      -
+1 I      78       2  TS  39 -20 I<    \_ [ipv6_addrconf]              -
+1 I      85       2  TS  39 -20 I<    \_ [kstrp]                      -
+1 I      86       2  TS  39 -20 I<    \_ [zswap1]                     -
+1 I      87       2  TS  39 -20 I<    \_ [zswap1]                     -
+1 I      88       2  TS  39 -20 I<    \_ [zswap-shrink]               -
+1 I      91       2  TS  39 -20 I<    \_ [charger_manager]            -
+1 I     117       2  TS  39 -20 I<    \_ [kworker/0:1H-events_hi      -
+1 I     118       2  TS  39 -20 I<    \_ [kworker/3:1H-events_hi      -
+1 I     139       2  TS  39 -20 I<    \_ [nvme-wq]                    -
+1 I     140       2  TS  39 -20 I<    \_ [nvme-reset-wq]              -
+1 I     141       2  TS  39 -20 I<    \_ [nvme-delete-wq]             -
+1 I     142       2  TS  39 -20 I<    \_ [nvme-auth-wq]               -
+1 I     153       2  TS  39 -20 I<    \_ [btrfs-worker]               -
+1 I     154       2  TS  39 -20 I<    \_ [btrfs-worker-hi]            -
+1 I     155       2  TS  39 -20 I<    \_ [btrfs-delalloc]             -
+1 I     156       2  TS  39 -20 I<    \_ [btrfs-flush_del]            -
+1 I     157       2  TS  39 -20 I<    \_ [btrfs-cache]                -
+1 I     158       2  TS  39 -20 I<    \_ [btrfs-fixup]                -
+1 I     159       2  TS  39 -20 I<    \_ [btrfs-endio]                -
+1 I     160       2  TS  39 -20 I<    \_ [btrfs-endio-met]            -
+1 I     161       2  TS  39 -20 I<    \_ [btrfs-rmw]                  -
+1 I     162       2  TS  39 -20 I<    \_ [btrfs-endio-wri]            -
+1 I     163       2  TS  39 -20 I<    \_ [btrfs-compresse]            -
+1 I     164       2  TS  39 -20 I<    \_ [btrfs-freespace]            -
+1 I     165       2  TS  39 -20 I<    \_ [btrfs-delayed-m]            -
+1 I     166       2  TS  39 -20 I<    \_ [btrfs-qgroup-re]            -
+1 S     167       2  TS  19   0 S     \_ [btrfs-cleaner]              -
+1 S     168       2  TS  19   0 S     \_ [btrfs-transaction]          -
+1 I     214       2  TS  39 -20 I<    \_ [iprt-VBoxWQueue]            -
+1 S     215       2  TS  19   0 S     \_ [iprt-VBoxTscThread]         -
+1 S     321       2  FF  90   - S     \_ [irq/134-FTCS1000:00]       50
+1 I     349       2  TS  39 -20 I<    \_ [cfg80211]                   -
+1 S     363       2  FF  90   - S     \_ [irq/135-iwlwifi:defaul     50
+1 S     364       2  FF  90   - S     \_ [irq/136-iwlwifi:queue_     50
+1 S     365       2  FF  90   - S     \_ [irq/137-iwlwifi:queue_     50
+1 S     367       2  FF  90   - S     \_ [irq/138-iwlwifi:queue_     50
+1 S     368       2  FF  90   - S     \_ [irq/139-iwlwifi:queue_     50
+1 I     369       2  TS  39 -20 I<    \_ [cryptd]                     -
+1 S     370       2  FF  90   - S     \_ [irq/140-iwlwifi:except     50
+1 S     432       2  FF  90   - S     \_ [card0-crtc0]               50
+1 S     433       2  FF  90   - S     \_ [card0-crtc1]               50
+1 S     434       2  FF  90   - S     \_ [card0-crtc2]               50
+5 S    1181       2  TS  29 -10 S<    \_ [krfcommd]                   -
+1 I   20687       2  TS  39 -20 I<    \_ [tls-strp]                   -
+1 I   80253       2  TS  19   0 I     \_ [kworker/1:0-mm_percpu_      -
+1 I   86441       2  TS  19   0 I     \_ [kworker/2:2-cgroup_des      -
+1 I   86443       2  TS  19   0 I     \_ [kworker/0:1-events]         -
+1 S   86469       2  FF  90   - S     \_ [irq/128-mei_me]            50
+1 I   90844       2  TS  39 -20 I<    \_ [kworker/u9:2-i915_flip      -
+1 I   91381       2  TS  19   0 I     \_ [kworker/u8:7-btrfs-end      -
+1 I   91768       2  TS  39 -20 I<    \_ [kworker/u9:1-i915_flip      -
+1 I   93988       2  TS  19   0 I     \_ [kworker/u8:4-btrfs-end      -
+1 I   94171       2  TS  19   0 I     \_ [kworker/u8:6-events_un      -
+1 I   94843       2  TS  19   0 I     \_ [kworker/u8:5-btrfs-wor      -
+1 I   95515       2  TS  19   0 I     \_ [kworker/0:0-events]         -
+1 I   95516       2  TS  19   0 I     \_ [kworker/1:2-cgroup_des      -
+1 I   95517       2  TS  19   0 I     \_ [kworker/3:0-cgroup_des      -
+1 I   95519       2  TS  19   0 I     \_ [kworker/u8:8-btrfs-end      -
+1 I   95957       2  TS  19   0 I     \_ [kworker/u8:0-i915]          -
+1 I   96092       2  TS  19   0 I     \_ [kworker/2:0-events]         -
+1 I   96094       2  TS  19   0 I     \_ [kworker/3:2-mm_percpu_      -
+1 I   96477       2  TS  19   0 I     \_ [kworker/u8:2-flush-btr      -
+1 I   96907       2  TS  19   0 I     \_ [kworker/u8:1-btrfs-wor      -
+1 I   97091       2  TS  39 -20 I<    \_ [kworker/u9:0]               -
+4 S       1       0  TS  19   0 Ss   /sbin/init                       -
+4 S     209       1  TS  19   0 Ss   /usr/lib/systemd/systemd-jo      -
+4 S     232       1  TS  19   0 Ss   /usr/lib/systemd/systemd-ud      -
+4 S     423       1  TS  19   0 Ss   /bin/sh /usr/bin/grub-btrfs      -
+0 S     678     423  TS  19   0 S     \_ inotifywait -q -q -e cr      -
+4 S     431       1  TS  19   0 Ss   /usr/lib/systemd/systemd-lo      -
+4 S     435       1  TS  19   0 Ssl  /usr/bin/touchegg --daemon       -
+4 S     439       1  TS  19   0 Ssl  /usr/bin/NetworkManager --n      -
+4 S     469       1  TS  19   0 Ssl  /usr/bin/sddm                    -
+4 S     626     469  TS  19   0 Ssl+  \_ /usr/lib/Xorg -nolisten      -
+4 S     954     469  TS  19   0 S     \_ /usr/lib/sddm/sddm-help      -
+4 S     693       1  TS  19   0 Ss   /usr/lib/bluetooth/bluetoot      -
+4 S     703       1  TS  19   0 Ss   /usr/bin/wpa_supplicant -u       -
+4 S     913       1  TS  19   0 Ssl  /usr/lib/udisks2/udisksd         -
+4 S     933       1  TS  19   0 Ssl  /usr/lib/upowerd                 -
+4 S   17221       1  TS  19   0 Ssl  /usr/bin/pamac-daemon            -

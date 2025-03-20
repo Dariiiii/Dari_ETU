@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Игра</title>
+  <style>
+    body {
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: "Comic Sans MS";
+    }
+
+    canvas {
+      border: 1px solid rgb(120, 231, 79);
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="playerInfo">
+    <p>
+      Игрок:
+      <script>
+        document.write(localStorage["username"]); 
+      </script>
+    </p>
+    <p>
+      Очки:
+      <span id="score"></span>
+    </p>
+    <p>
+      Здоровье:
+      <span id="hp"></span>
+    </p>
+    <p>
+      Мана:
+      <span id="mana"></span>
+    </p>
+    <p>
+      Ключ:
+      <span id="key"></span>
+    </p>
+  </div>
+  <canvas id="map" width="960" height="640"></canvas>
+  <script src="/scripts/GameManager.js" type="module"></script>
+</body>
+</html>

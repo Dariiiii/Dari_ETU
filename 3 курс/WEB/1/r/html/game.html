@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/game.css">
+    <title>Game</title>
+</head>
+<body>
+
+    <div id="playerInfo">
+        <p>
+            Игрок:
+            <span id="playerName"></span>
+        </p>
+        <p>
+            Очки:
+            <span id="playerScore"></span>/4
+        </p>
+        <p>
+            Время:
+            <span id="playerTime"></span> у.е.
+        </p>
+    </div>
+    <div id="gameOver">
+        GAME OVER
+    </div>
+    <div id="youWon">
+        YOU WON
+    </div>
+    <div id="recordTable">
+        <p>Таблица рекордов: </p>
+    </div>
+    <div>
+        <button type="button" id="goToStartPage" onclick="history.back()">Авторизация</button>
+    </div>
+    <canvas id="map" width="960" height="640"></canvas>
+    <script src="../scripts/SpriteManager.js" type="module"></script>
+    <script src="../scripts/GameManager.js" type="module"></script>
+    <script src="../scripts/MapManager.js" type="module"></script>
+    <script src="../scripts/run.js" type="module"></script>
+
+</body>
+</html>
