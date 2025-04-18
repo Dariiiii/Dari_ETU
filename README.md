@@ -1,5 +1,9 @@
 # Dari_ETU
 
+## актуальные ссылки на 8 семестр
+
+[текст статьи](https://github.com/moevm/scientific_writing-2024/blob/main/1384_Usacheva_DV/paper.md)
+
 ## актуальные ссылки на 7 семестр
 
 ### опнп
