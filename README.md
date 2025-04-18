@@ -4,6 +4,8 @@
 
 [текст статьи](https://github.com/moevm/scientific_writing-2024/blob/main/1384_Usacheva_DV/paper.md)
 
+[диплом](https://docs.google.com/document/d/1YoMQOJtuLtS5eYtwgmBZuzDR5JBk0sd-4X9EBh1TFzE/edit?usp=sharing)
+
 ## актуальные ссылки на 7 семестр
 
 ### опнп
